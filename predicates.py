@@ -11,6 +11,13 @@ class parallel:
     def make_parallel(self, a, b):
         relationships.append([a,b])
 
+    def has(self, a, b):
+        if [a,b] in self.relationships:
+            return True
+        else:
+            return False
+
+
 
 class equal:
     def __init__():
@@ -18,6 +25,13 @@ class equal:
 
     def make_equal(self, a, b):
         relationships.append([a,b])
+
+    def has(self, a, b):
+        if [a,b] in self.relationships:
+            return True        
+        else:
+          return False
+
 
 #actual object instanciation
 set_parallel = parallel()
