@@ -5,11 +5,13 @@
 #starting with line and triangle
 
 class parallel:
-    def __init__():
-        self.relationships = []
+    relationships = []
+
+    #def __init__(self):
+    #    self.relationships = []
 
     def make_parallel(self, a, b):
-        relationships.append([a,b])
+        self.relationships.append([a,b])
 
     def has(self, a, b):
         if [a,b] in self.relationships:
@@ -18,11 +20,13 @@ class parallel:
             return False
 
 class perpendicular:
-    def __init__():
-        self.relationships = []
+    relationships = []
+
+    #def __init__(self):
+    #    self.relationships = []
 
     def make_perpendicular(self, a, b):
-        relationships.append([a,b])
+        self.relationships.append([a,b])
 
     def has(self, a, b):
         if [a,b] in self.relationships:
@@ -32,11 +36,13 @@ class perpendicular:
 
 #equal being used as a descriptor of length, angle or area
 class equal:
-    def __init__():
-        self.relationships = []
+    relationships = []
+
+    #def __init__(self):
+    #    self.relationships = []
 
     def make_equal(self, a, b):
-        relationships.append([a,b])
+        self.relationships.append([a,b])
 
     def has(self, a, b):
         if [a,b] in self.relationships:
@@ -46,11 +52,13 @@ class equal:
 
 
 class fraction:
-    def __init__():
-        self.relationships = []
+    relationships = []
 
-    def make_fraction(self, a, b):
-        relationships.append([a,b])
+    #def __init__(self):
+    #    self.relationships = []
+
+    def make_fraction(self, a, b, fraction):
+        self.relationships.append([a,b,fraction])
 
     def has(self, a, b):
         if [a,b] in self.relationships:
@@ -59,11 +67,13 @@ class fraction:
             return False
 
 class sum_value:
-    def __init__():
-        self.relationships = []
+    relationships = []
 
-    def make_sum_value(self, a, b):
-        relationships.append([a,b])
+    #def __init__(self):
+    #    self.relationships = []
+
+    def make_sum_value(self, a, b, sum):
+        self.relationships.append([a,b,sum])
 
     def has(self, a, b):
         if [a,b] in self.relationships:
@@ -72,11 +82,13 @@ class sum_value:
             return False
 
 class similar:
-    def __init__():
-        self.relationships = []
+    relationships = []
+
+    #def __init__(self):
+    #    self.relationships = []
 
     def make_similar(self, a, b):
-        relationships.append([a,b])
+        self.relationships.append([a,b])
 
     def has(self, a, b):
         if [a,b] in self.relationships:
@@ -85,11 +97,13 @@ class similar:
             return False
 
 class congruent:
-    def __init__():
-        self.relationships = []
+    relationships = []
+
+    #def __init__(self):
+    #    self.relationships = []
 
     def make_congruent(self, a, b):
-        relationships.append([a,b])
+        self.relationships.append([a,b])
 
     def has(self, a, b):
         if [a,b] in self.relationships:
@@ -99,11 +113,13 @@ class congruent:
 
 
 class tan:
-    def __init__():
-        self.relationships = []
+    relationships = []
+
+    #def __init__(self):
+    #    self.relationships = []
 
     def make_tan(self, a, b):
-        relationships.append([a,b])
+        self.relationships.append([a,b])
 
     def has(self, a, b):
         if [a,b] in self.relationships:
@@ -113,17 +129,17 @@ class tan:
 
 
 #actual object instanciation
-set_parallel = parallel()
-set_perpendicular = perpendicular()
-set_equal = equal()
-set_fraction = fraction()
-set_sum = sum()
-set_similar = similar()
-set_congruent = congruent()
-set_tan = tan()
+parallel = parallel()
+perpendicular = perpendicular()
+equal = equal()
+fraction = fraction()
+sum_value = sum_value()
+similar = similar()
+congruent = congruent()
+tan = tan()
 
 def set_parallel(name1, name2): #When a “parallel” predicate is given
-    set_parallel.make_parallel(name1, name2)#calls function that actually makes them parallel
+    parallel.make_parallel(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
@@ -146,7 +162,7 @@ def set_parallel(name1, name2): #When a “parallel” predicate is given
         know_s11()
 
 def set_perpendicular(name1, name2): #When a “perpendicular” predicate is given
-    set_perpendicular.make_perpendicular(name1, name2)#calls function that actually makes them perpendicular
+    perpendicular.make_perpendicular(name1, name2)#calls function that actually makes them perpendicular
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
@@ -169,7 +185,7 @@ def set_perpendicular(name1, name2): #When a “perpendicular” predicate is gi
         know_s11()
 
 def set_equal(name1, name2): #Similar to above
-    set_equal.make_equal(name1, name2)#calls function that actually makes them parallel
+    equal.make_equal(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
@@ -193,7 +209,7 @@ def set_equal(name1, name2): #Similar to above
 
 
 def set_fraction(name1, name2,fraction): #When a “parallel” predicate is given
-    set_fraction.make_fraction(name1, name2, fraction)#calls function that actually makes them parallel
+    fraction.make_fraction(name1, name2, fraction)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
@@ -216,7 +232,7 @@ def set_fraction(name1, name2,fraction): #When a “parallel” predicate is giv
         know_s11()
 
 def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
-    set_sum_value.make_sum_value(name1, name2,sum)#calls function that actually makes them parallel
+    sum_value.make_sum_value(name1, name2,sum)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
@@ -240,7 +256,7 @@ def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
 
 
 def set_similar(name1, name2): #When a “parallel” predicate is given
-    set_similar.make_similar(name1, name2)#calls function that actually makes them parallel
+    similar.make_similar(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
@@ -263,7 +279,7 @@ def set_similar(name1, name2): #When a “parallel” predicate is given
         know_s11()
 
 def set_congruent(name1, name2): #When a “parallel” predicate is given
-    set_congruent.make_congruent(name1, name2)#calls function that actually makes them parallel
+    congruent.make_congruent(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
@@ -286,7 +302,7 @@ def set_congruent(name1, name2): #When a “parallel” predicate is given
         know_s11()
 
 def set_tan(name1, name2): #When a “parallel” predicate is given
-    set_tan.make_tan(name1, name2)#calls function that actually makes them parallel
+    tan.make_tan(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
@@ -314,10 +330,10 @@ def set_tan(name1, name2): #When a “parallel” predicate is given
 def know_s8():
     print ("s8 known, and being tested")
 
-    if set_parallel.has(s8, s10):
+    if parallel.has("s8", "s10"):
        #b1.angle() = b3.angle()            
-       know.b1()
-    know.b3()
+        know_s8()
+        know_s10()
 
 def know_s9():
     print ("s9 known, but undefined")
