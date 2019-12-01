@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+testdict = {
+    "NULL": ["NULL"]
+    }
+outputdict = dict(testdict)
 
 
 #starting with line and triangle
@@ -14,7 +18,7 @@ class parallel:
         self.relationships.append([a,b])
 
     def has(self, a, b):
-        if [a,b] in self.relationships:
+        if [a,b] in self.relationships or [a,b] in self.relationships: 
             return True
         else:
             return False
@@ -29,7 +33,7 @@ class perpendicular:
         self.relationships.append([a,b])
 
     def has(self, a, b):
-        if [a,b] in self.relationships:
+        if [a,b] in self.relationships or [a,b] in self.relationships:
             return True
         else:
             return False
@@ -45,7 +49,7 @@ class equal:
         self.relationships.append([a,b])
 
     def has(self, a, b):
-        if [a,b] in self.relationships:
+        if [a,b] in self.relationships or [a,b] in self.relationships:
             return True        
         else:
           return False
@@ -61,7 +65,7 @@ class fraction:
         self.relationships.append([a,b,fraction])
 
     def has(self, a, b):
-        if [a,b] in self.relationships:
+        if [a,b] in self.relationships or [a,b] in self.relationships:
             return True
         else:
             return False
@@ -76,7 +80,7 @@ class sum_value:
         self.relationships.append([a,b,sum])
 
     def has(self, a, b):
-        if [a,b] in self.relationships:
+        if [a,b] in self.relationships or [a,b] in self.relationships:
             return True
         else:
             return False
@@ -91,7 +95,7 @@ class similar:
         self.relationships.append([a,b])
 
     def has(self, a, b):
-        if [a,b] in self.relationships:
+        if [a,b] in self.relationships or [a,b] in self.relationships:
             return True
         else:
             return False
@@ -106,7 +110,7 @@ class congruent:
         self.relationships.append([a,b])
 
     def has(self, a, b):
-        if [a,b] in self.relationships:
+        if [a,b] in self.relationships or [a,b] in self.relationships:
             return True
         else:
             return False
@@ -122,7 +126,7 @@ class tan:
         self.relationships.append([a,b])
 
     def has(self, a, b):
-        if [a,b] in self.relationships:
+        if [a,b] in self.relationships or [a,b] in self.relationships:
             return True
         else:
             return False
@@ -139,6 +143,9 @@ congruent = congruent()
 tan = tan()
 
 def set_parallel(name1, name2): #When a “parallel” predicate is given
+    if parallel.has(name1, name2):
+        return False
+
     parallel.make_parallel(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
@@ -162,6 +169,9 @@ def set_parallel(name1, name2): #When a “parallel” predicate is given
         know_s11()
 
 def set_perpendicular(name1, name2): #When a “perpendicular” predicate is given
+    if perpendicular.has(name1, name2):
+        return False
+
     perpendicular.make_perpendicular(name1, name2)#calls function that actually makes them perpendicular
 
     #calls corrosponding know functions
@@ -185,6 +195,9 @@ def set_perpendicular(name1, name2): #When a “perpendicular” predicate is gi
         know_s11()
 
 def set_equal(name1, name2): #Similar to above
+    if equal.has(name1, name2):
+        return False
+    
     equal.make_equal(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
@@ -197,6 +210,19 @@ def set_equal(name1, name2): #Similar to above
         know_s10()   
     elif name1 is "s11":
         know_s11()
+    elif name1 is "ar7":
+        know_ar7()       
+    elif name1 is "a4":
+        know_a4()    
+    elif name1 is "a5":
+        know_a5()    
+    elif name1 is "a6":
+        know_a6()    
+    elif name1 is "ar7":
+        know_a7()    
+    elif name1 is "a8":
+        know_a8()     
+
 
     if name2 is "s8":
         know_s8()
@@ -206,9 +232,25 @@ def set_equal(name1, name2): #Similar to above
         know_s10()   
     elif name2 is "s11":
         know_s11()
+    elif name2 is "ar7":
+        know_ar7()       
+    elif name2 is "a4":
+        know_a4()    
+    elif name2 is "a5":
+        know_a5()    
+    elif name2 is "a6":
+        know_a6()    
+    elif name2 is "ar7":
+        know_a7()    
+    elif name2 is "a8":
+        know_a8()     
+
 
 
 def set_fraction(name1, name2,fraction): #When a “parallel” predicate is given
+    if fraction.has(name1, name2):
+        return False
+
     fraction.make_fraction(name1, name2, fraction)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
@@ -221,6 +263,19 @@ def set_fraction(name1, name2,fraction): #When a “parallel” predicate is giv
         know_s10()   
     elif name1 is "s11":
         know_s11()
+    elif name1 is "ar7":
+        know_ar7()       
+    elif name1 is "a4":
+        know_a4()    
+    elif name1 is "a5":
+        know_a5()    
+    elif name1 is "a6":
+        know_a6()    
+    elif name1 is "ar7":
+        know_a7()    
+    elif name1 is "a8":
+        know_a8()     
+
 
     if name2 is "s8":
         know_s8()
@@ -230,8 +285,24 @@ def set_fraction(name1, name2,fraction): #When a “parallel” predicate is giv
         know_s10()   
     elif name2 is "s11":
         know_s11()
+    elif name2 is "ar7":
+        know_ar7()       
+    elif name2 is "a4":
+        know_a4()    
+    elif name2 is "a5":
+        know_a5()    
+    elif name2 is "a6":
+        know_a6()    
+    elif name2 is "ar7":
+        know_a7()    
+    elif name2 is "a8":
+        know_a8()     
+
 
 def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
+    if sum_value.has(name1, name2):
+        return False
+
     sum_value.make_sum_value(name1, name2,sum)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
@@ -244,6 +315,19 @@ def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
         know_s10()   
     elif name1 is "s11":
         know_s11()
+    elif name1 is "ar7":
+        know_ar7()       
+    elif name1 is "a4":
+        know_a4()    
+    elif name1 is "a5":
+        know_a5()    
+    elif name1 is "a6":
+        know_a6()    
+    elif name1 is "ar7":
+        know_a7()    
+    elif name1 is "a8":
+        know_a8()     
+
 
     if name2 is "s8":
         know_s8()
@@ -253,9 +337,25 @@ def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
         know_s10()   
     elif name2 is "s11":
         know_s11()
+    elif name2 is "ar7":
+        know_ar7()       
+    elif name2 is "a4":
+        know_a4()    
+    elif name2 is "a5":
+        know_a5()    
+    elif name2 is "a6":
+        know_a6()    
+    elif name2 is "ar7":
+        know_a7()    
+    elif name2 is "a8":
+        know_a8()     
+
 
 
 def set_similar(name1, name2): #When a “parallel” predicate is given
+    if similar.has(name1, name2):
+        return False
+
     similar.make_similar(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
@@ -279,6 +379,9 @@ def set_similar(name1, name2): #When a “parallel” predicate is given
         know_s11()
 
 def set_congruent(name1, name2): #When a “parallel” predicate is given
+    if congruent.has(name1, name2):
+        return False
+
     congruent.make_congruent(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
@@ -302,6 +405,9 @@ def set_congruent(name1, name2): #When a “parallel” predicate is given
         know_s11()
 
 def set_tan(name1, name2): #When a “parallel” predicate is given
+    if tan.has(name1, name2):
+        return False
+
     tan.make_tan(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
@@ -329,56 +435,105 @@ def set_tan(name1, name2): #When a “parallel” predicate is given
 
 def know_s8():
     print ("s8 known, and being tested")
-
     if parallel.has("s8", "s10"):
-       #b1.angle() = b3.angle()            
-        know_s8()
-        know_s10()
+       set_equal("a5","a7")           
+       set_equal("a8","a6")   
 
 def know_s9():
-    print ("s9 known, but undefined")
+    print ("s9 known, and being tested")
+    if equal.has("s9", "s10"):
+       set_equal("a5","a4")           
+    if equal.has("s9", "s11"):
+       set_equal("a5","a6")  
 
 def know_s10():
-    print ("s10 known, but undefined")
+    print ("s10 known, and being tested")
+    if equal.has("s9", "s10"):
+       set_equal("a5","a6")  
+    if equal.has("s11", "s10"):
+       set_equal("a4","a6")  
 
 def know_s11():
-    print ("s11 known, but undefined")
+    print ("s11 known, and being tested")
+    if equal.has("s9", "s11"):
+       set_equal("a5","a6")  
+    if equal.has("s11", "s10"):
+       set_equal("a4","a6")  
 
 def know_a4():
-    print ("a4 known, but undefined" )
+    print ("a4 known, and being tested" )
+    if equal.has("a4", "a5"):
+       set_equal("s9","s10")  
+    if equal.has("a4", "a6"):
+       set_equal("s11","s10")
+ 
 
 def know_a5():
-    print ("a5 known, but undefined" )
+    print ("a5 known, and being tested" )
+    if equal.has("a4", "a5"):
+       set_equal("s9","s10")  
+    if equal.has("a5", "a6"):
+       set_equal("s11","s9")  
+    if equal.has("a7","a5"):
+        set_parallel("s10","s8")
 
 def know_a6():
-    print ("a6 known, but undefined" )
+    print ("a6 known, and being tested" )
+    if equal.has("a6", "a5"):
+       set_equal("s9","s11")  
+    if equal.has("a4", "a6"):
+       set_equal("s11","s10")
+    if equal.has("a8","a6"):
+        set_parallel("s10","s8")  
 
 def know_a7():
-    print ("a7 known, but undefined" )
+    print ("a7 known, and being tested" )
+    if equal.has("a7","a5"):
+        set_parallel("s10","s8")
 
 def know_a8():
-    print ("a8 known, but undefined" )
+    print ("a8 known, and being tested" )
+    if equal.has("a8","a6"):
+        set_parallel("s10","s8")  
+
+def know_ar7():
+    print ("ar7 known, but undefined" )
 
 
 
 
 def get_all():
+    if len(outputdict) == 1:
+        print("NULL")
+        return "null"
+
+    #for i in parallel.relationships:
+        #loop here using
+        #outputdict["parallel"] = [stuff]
+
+
+    outputdict.pop("NULL") 
+
+    print(outputdict)
+    return outputdict
     
-    testdict = {
-    "parallel": ["s8","s11"],
-    "equal": ["s8","s11"],
-    "fraction": ["a5","a6","1/2"]
-    }
-    mydict = dict(testdict)
-    print(testdict)
-    return mydict
-    
-
-    #else:
-    return "null"
+    #leftovers
+    #testdict = {
+    #"parallel": ["s8","s11"],
+    #"equal": ["s8","s11"],
+    #"fraction": ["a5","a6","1/2"]
+    #}
+    #mydict = dict(testdict)
+    #print(testdict)
 
 
 
+#testing main
+print("parameter 1 test")
+set_parallel("s8","s10")
+print("parameter 2 test")
+set_equal("s11","s10")
+get_all()
 
 
 
