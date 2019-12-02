@@ -16,6 +16,11 @@ class parallel:
 
     def make_parallel(self, a, b):
         self.relationships.append([a,b])
+        if outputdict.get("parallel") is not None:
+            outputdict["parallel"].append([a,b])
+            
+        else:
+            outputdict["parallel"] = [[a,b]]
 
     def has(self, a, b):
         if [a,b] in self.relationships or [b,a] in self.relationships: 
@@ -31,6 +36,11 @@ class perpendicular:
 
     def make_perpendicular(self, a, b):
         self.relationships.append([a,b])
+        if outputdict.get("perpendicular") is not None:
+            outputdict["perpendicular"].append([a,b])
+            
+        else:
+            outputdict["perpendicular"] = [[a,b]]
 
     def has(self, a, b):
         if [a,b] in self.relationships or [b,a] in self.relationships:
@@ -47,6 +57,11 @@ class equal:
 
     def make_equal(self, a, b):
         self.relationships.append([a,b])
+        if outputdict.get("equal") is not None:
+            outputdict["equal"].append([a,b])
+            
+        else:
+            outputdict["equal"] = [[a,b]]
 
     def has(self, a, b):
         if [a,b] in self.relationships or [b,a] in self.relationships:
@@ -63,6 +78,11 @@ class fraction:
 
     def make_fraction(self, a, b, fraction):
         self.relationships.append([a,b,fraction])
+        if outputdict.get("fraction") is not None:
+            outputdict["fraction"].append([a,b])
+            
+        else:
+            outputdict["fraction"] = [[a,b]]
 
     def has(self, a, b):
         if [a,b] in self.relationships or [b,a] in self.relationships:
@@ -78,6 +98,11 @@ class sum_value:
 
     def make_sum_value(self, a, b, sum):
         self.relationships.append([a,b,sum])
+        if outputdict.get("sum_value") is not None:
+            outputdict["sum_value"].append([a,b])
+            
+        else:
+            outputdict["sum_value"] = [[a,b]]
 
     def has(self, a, b):
         if [a,b] in self.relationships or [a,b] in self.relationships:
@@ -93,6 +118,11 @@ class similar:
 
     def make_similar(self, a, b):
         self.relationships.append([a,b])
+        if outputdict.get("similar") is not None:
+            outputdict["similar"].append([a,b])
+            
+        else:
+            outputdict["similar"] = [[a,b]]
 
     def has(self, a, b):
         if [a,b] in self.relationships or [b,a] in self.relationships:
@@ -108,6 +138,11 @@ class congruent:
 
     def make_congruent(self, a, b):
         self.relationships.append([a,b])
+        if outputdict.get("congruent") is not None:
+            outputdict["congruent"].append([a,b])
+            
+        else:
+            outputdict["congruent"] = [[a,b]]
 
     def has(self, a, b):
         if [a,b] in self.relationships or [b,a] in self.relationships:
@@ -124,6 +159,11 @@ class tan:
 
     def make_tan(self, a, b):
         self.relationships.append([a,b])
+        if outputdict.get("tangent") is not None:
+            outputdict["tangent"].append([a,b])
+            
+        else:
+            outputdict["tangent"] = [[a,b]]
 
     def has(self, a, b):
         if [a,b] in self.relationships or [b,a] in self.relationships:
@@ -503,7 +543,8 @@ def know_ar7():
 
 
 def get_all():
-    if len(outputdict) == 1:
+
+    if len(outputdict) == 1:#check for when dictionary is functionally empty and returns null
         print("NULL")
         return "null"
 
@@ -512,7 +553,7 @@ def get_all():
         #outputdict["parallel"] = [stuff]
 
 
-    outputdict.pop("NULL") 
+    outputdict.pop("NULL") #removes temporary null from dictionary
 
     print(outputdict)
     return outputdict
