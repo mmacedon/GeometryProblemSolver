@@ -84,11 +84,28 @@ class fraction:
         else:
             outputdict["fraction"] = [[a,b]]
 
-    def has(self, a, b):
-        if [a,b] in self.relationships or [b,a] in self.relationships:
+    def has(self, a, b,c):
+        if [a,b,c] in self.relationships or [b,a,c] in self.relationships:
             return True
         else:
             return False
+
+            return False
+            return False
+
+    def get_fraction(self,a,b):
+        for i in self.relationships:
+            if (i[0] is a and i[1] is b) or (i[0] is a and i[1] is b):
+                return i[2]
+        return "null"
+
+    #def has(self, a, b):
+    #    if [a,b,self.get_fraction(self,a,b)] in self.relationships or [b,a,self.get_fraction(self,a,b)] in self.relationships:
+    #        return True
+    #    else:
+    #        return False
+
+
 
 class sum_value:
     relationships = []
@@ -104,11 +121,23 @@ class sum_value:
         else:
             outputdict["sum_value"] = [[a,b]]
 
-    def has(self, a, b):
-        if [a,b] in self.relationships or [a,b] in self.relationships:
+    def has(self, a, b,c):
+        if [a,b,c] in self.relationships or [a,b,c] in self.relationships:
             return True
         else:
             return False
+
+    #def has(self, a, b):
+    #    if [a,b,get_sum(self,a,b)] in self.relationships or [b,a,get_sum(self,a,b)] in self.relationships:
+    #        return True
+    #    else:
+    #        return False
+
+    def get_sum(self,a,b):
+        for i in self.relationships:
+            if (i[0] is a and i[1] is b) or (i[0] is a and i[1] is b):
+                return i[2]
+        return "null"
 
 class similar:
     relationships = []
@@ -178,9 +207,9 @@ perpendicular = perpendicular()
 equal = equal()
 fraction = fraction()
 sum_value = sum_value()
-similar = similar()
-congruent = congruent()
-tan = tan()
+similar = similar() #not needed, only one triangle
+congruent = congruent() #not needed, only one triangel
+tan = tan() #not needed, no circles
 
 def set_parallel(name1, name2): #When a “parallel” predicate is given
     if parallel.has(name1, name2):
@@ -340,7 +369,7 @@ def set_fraction(name1, name2,fraction): #When a “parallel” predicate is giv
 
 
 def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
-    if sum_value.has(name1, name2):
+    if sum_value.has(name1, name2, sum):
         return False
 
     sum_value.make_sum_value(name1, name2,sum)#calls function that actually makes them parallel
@@ -478,23 +507,56 @@ def know_s8():
     if parallel.has("s8", "s10"):
        set_equal("a5","a7")           
        set_equal("a8","a6")   
+    if parallel.has("s8", "s11"):
+       set_sum_value("a4","a8","180")   
+    if parallel.has("s8", "s9"):
+       set_sum_value("a4","a7","180")  
+    if set_perpendicular("s8","s9"):
+        set_sum_value("a4","a7","90")    
+    if set_perpendicular("s8","s11"):
+        set_sum_value("a4","a8","90")   
+ 
+         
 
 def know_s9():
     print ("s9 known, and being tested")
     if equal.has("s9", "s10"):
        set_equal("a5","a4")           
     if equal.has("s9", "s11"):
-       set_equal("a5","a6")  
+       set_equal("a5","a6") 
+    if parallel.has("s8", "s9"):
+       set_sum_value("a4","a7","180")  
+    if set_perpendicular("s8","s9"):
+        set_sum_value("a4","a7","90") 
+    if set_perpendicular("s10","s9"):
+        set_sum_value("a4","a5","90") 
+    if set_perpendicular("s11","s9"):
+        set_sum_value("a5","a6","90") 
 
 def know_s10():
     print ("s10 known, and being tested")
+    if parallel.has("s8", "s10"):
+       set_equal("a5","a7")           
+       set_equal("a8","a6")  
     if equal.has("s9", "s10"):
        set_equal("a5","a6")  
     if equal.has("s11", "s10"):
        set_equal("a4","a6")  
+    if set_perpendicular("s10","s9"):
+        set_sum_value("a4","a5","90") 
+    if set_perpendicular("s10","s11"):
+        set_sum_value("a4","a6","90") 
 
 def know_s11():
     print ("s11 known, and being tested")
+    if parallel.has("s8", "s11"):
+       set_sum_value("a4","a8","180")  
+    if set_perpendicular("s8","s11"):
+        set_sum_value("a4","a8","90") 
+    if set_perpendicular("s11","s10"):
+        set_sum_value("a4","a6","90") 
+    if set_perpendicular("s11","s9"):
+        set_sum_value("a5","a6","90") 
     if equal.has("s9", "s11"):
        set_equal("a5","a6")  
     if equal.has("s11", "s10"):
@@ -506,6 +568,13 @@ def know_a4():
        set_equal("s9","s10")  
     if equal.has("a4", "a6"):
        set_equal("s11","s10")
+    if sum_value.has("a4","a5","90"):
+        set_perpendicular("s9","s10")
+    if sum_value.has("a4","a6","90"):
+        set_perpendicular("s11","s10")
+
+    #if equal.has("a4", "a7"):
+    #   set_equal("s11","s10")
  
 
 def know_a5():
@@ -516,6 +585,10 @@ def know_a5():
        set_equal("s11","s9")  
     if equal.has("a7","a5"):
         set_parallel("s10","s8")
+    if sum_value.has("a4","a5","90"):
+        set_perpendicular("s9","s10")
+    if sum_value.has("a6","a5","90"):
+        set_perpendicular("s11","s9")
 
 def know_a6():
     print ("a6 known, and being tested" )
@@ -525,19 +598,39 @@ def know_a6():
        set_equal("s11","s10")
     if equal.has("a8","a6"):
         set_parallel("s10","s8")  
+    if sum_value.has("a6","a5","90"):
+        set_perpendicular("s9","s11")
+    if sum_value.has("a4","a6","90"):
+        set_perpendicular("s11","s10")
 
 def know_a7():
     print ("a7 known, and being tested" )
     if equal.has("a7","a5"):
         set_parallel("s10","s8")
+    if sum_value.has("a7","a8",sum_value.get_sum("a7","a8")):
+        set_sum_value("a7","a8",sum_value.get_sum("a7","a8"))
+    if sum_value.has("a7","a4","180"):
+        set_parallel("s8","s9")
+    if sum_value.has("a7","a4","90"):
+        set_perpendicular("s8","s9")
+
+    #   set_sum_value("a4","a7","180")  
+    #if set_perpendicular("s8","s9"):
+    #    set_sum_value("a4","a7","90") 
 
 def know_a8():
     print ("a8 known, and being tested" )
     if equal.has("a8","a6"):
-        set_parallel("s10","s8")  
+        set_parallel("s10","s8") 
+    if sum_value.has("a7","a8",sum_value.get_sum("a7","a8")):
+        set_sum_value("a7","a8",sum_value.get_sum("a7","a8"))
+    if sum_value.has("a8","a4","180"):
+        set_parallel("s8","s11")
+    if sum_value.has("a8","a4","90"):
+        set_perpendicular("s11","s8") 
 
 def know_ar7():
-    print ("ar7 known, but undefined" )
+    print ("ar7 known, but useless in this problem" )
 
 
 
@@ -571,9 +664,11 @@ def get_all():
 
 #testing main
 print("parameter 1 test")
-set_parallel("s8","s10")
+set_parallel("s8","s11")
 print("parameter 2 test")
-set_equal("s11","s10")
+set_equal("a4","a6")
+print("parameter 3 test")
+set_sum_value("a7","a8","90")
 get_all()
 
 
