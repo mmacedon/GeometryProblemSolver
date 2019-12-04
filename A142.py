@@ -18,12 +18,12 @@ class parallel:
         self.relationships.append([a,b])
         if outputdict.get("parallel") is not None:
             outputdict["parallel"].append([a,b])
-            
+
         else:
             outputdict["parallel"] = [[a,b]]
 
     def has(self, a, b):
-        if [a,b] in self.relationships or [b,a] in self.relationships: 
+        if [a,b] in self.relationships or [b,a] in self.relationships:
             return True
         else:
             return False
@@ -38,7 +38,7 @@ class perpendicular:
         self.relationships.append([a,b])
         if outputdict.get("perpendicular") is not None:
             outputdict["perpendicular"].append([a,b])
-            
+
         else:
             outputdict["perpendicular"] = [[a,b]]
 
@@ -59,13 +59,13 @@ class equal:
         self.relationships.append([a,b])
         if outputdict.get("equal") is not None:
             outputdict["equal"].append([a,b])
-            
+
         else:
             outputdict["equal"] = [[a,b]]
 
     def has(self, a, b):
         if [a,b] in self.relationships or [b,a] in self.relationships:
-            return True        
+            return True
         else:
           return False
 
@@ -80,7 +80,7 @@ class fraction:
         self.relationships.append([a,b,fraction])
         if outputdict.get("fraction") is not None:
             outputdict["fraction"].append([a,b])
-            
+
         else:
             outputdict["fraction"] = [[a,b]]
 
@@ -117,7 +117,7 @@ class sum_value:
         self.relationships.append([a,b,sum])
         if outputdict.get("sum_value") is not None:
             outputdict["sum_value"].append([a,b])
-            
+
         else:
             outputdict["sum_value"] = [[a,b]]
 
@@ -135,7 +135,7 @@ class sum_value:
 
     def get_sum(self,a,b):
         for i in self.relationships:
-            if (i[0] is a and i[1] is b) or (i[0] is a and i[1] is b):
+            if (i[0] is a and i[1] is b) or (i[0] is b and i[1] is a):
                 return i[2]
         return "null"
 
@@ -149,7 +149,7 @@ class similar:
         self.relationships.append([a,b])
         if outputdict.get("similar") is not None:
             outputdict["similar"].append([a,b])
-            
+
         else:
             outputdict["similar"] = [[a,b]]
 
@@ -169,7 +169,7 @@ class congruent:
         self.relationships.append([a,b])
         if outputdict.get("congruent") is not None:
             outputdict["congruent"].append([a,b])
-            
+
         else:
             outputdict["congruent"] = [[a,b]]
 
@@ -190,7 +190,7 @@ class tan:
         self.relationships.append([a,b])
         if outputdict.get("tangent") is not None:
             outputdict["tangent"].append([a,b])
-            
+
         else:
             outputdict["tangent"] = [[a,b]]
 
@@ -219,21 +219,21 @@ def set_parallel(name1, name2): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":  
+    if name1 is "s8":
         know_s8()
     elif name1 is "s9":
-        know_s9()    
+        know_s9()
     elif name1 is "s10":
-        know_s10()   
+        know_s10()
     elif name1 is "s11":
         know_s11()
 
     if name2 is "s8":
         know_s8()
     elif name2 is "s9":
-        know_s9()    
+        know_s9()
     elif name2 is "s10":
-        know_s10()   
+        know_s10()
     elif name2 is "s11":
         know_s11()
 
@@ -245,74 +245,74 @@ def set_perpendicular(name1, name2): #When a “perpendicular” predicate is gi
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":  
+    if name1 is "s8":
         know_s8()
     elif name1 is "s9":
-        know_s9()    
+        know_s9()
     elif name1 is "s10":
-        know_s10()   
+        know_s10()
     elif name1 is "s11":
         know_s11()
 
     if name2 is "s8":
         know_s8()
     elif name2 is "s9":
-        know_s9()    
+        know_s9()
     elif name2 is "s10":
-        know_s10()   
+        know_s10()
     elif name2 is "s11":
         know_s11()
 
 def set_equal(name1, name2): #Similar to above
     if equal.has(name1, name2):
         return False
-    
+
     equal.make_equal(name1, name2)#calls function that actually makes them parallel
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":  
+    if name1 is "s8":
         know_s8()
     elif name1 is "s9":
-        know_s9()    
+        know_s9()
     elif name1 is "s10":
-        know_s10()   
+        know_s10()
     elif name1 is "s11":
         know_s11()
     elif name1 is "ar7":
-        know_ar7()       
+        know_ar7()
     elif name1 is "a4":
-        know_a4()    
+        know_a4()
     elif name1 is "a5":
-        know_a5()    
+        know_a5()
     elif name1 is "a6":
-        know_a6()    
+        know_a6()
     elif name1 is "ar7":
-        know_a7()    
+        know_a7()
     elif name1 is "a8":
-        know_a8()     
+        know_a8()
 
 
     if name2 is "s8":
         know_s8()
     elif name2 is "s9":
-        know_s9()    
+        know_s9()
     elif name2 is "s10":
-        know_s10()   
+        know_s10()
     elif name2 is "s11":
         know_s11()
     elif name2 is "ar7":
-        know_ar7()       
+        know_ar7()
     elif name2 is "a4":
-        know_a4()    
+        know_a4()
     elif name2 is "a5":
-        know_a5()    
+        know_a5()
     elif name2 is "a6":
-        know_a6()    
+        know_a6()
     elif name2 is "ar7":
-        know_a7()    
+        know_a7()
     elif name2 is "a8":
-        know_a8()     
+        know_a8()
 
 
 
@@ -324,48 +324,48 @@ def set_fraction(name1, name2,fraction): #When a “parallel” predicate is giv
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":  
+    if name1 is "s8":
         know_s8()
     elif name1 is "s9":
-        know_s9()    
+        know_s9()
     elif name1 is "s10":
-        know_s10()   
+        know_s10()
     elif name1 is "s11":
         know_s11()
     elif name1 is "ar7":
-        know_ar7()       
+        know_ar7()
     elif name1 is "a4":
-        know_a4()    
+        know_a4()
     elif name1 is "a5":
-        know_a5()    
+        know_a5()
     elif name1 is "a6":
-        know_a6()    
+        know_a6()
     elif name1 is "ar7":
-        know_a7()    
+        know_a7()
     elif name1 is "a8":
-        know_a8()     
+        know_a8()
 
 
     if name2 is "s8":
         know_s8()
     elif name2 is "s9":
-        know_s9()    
+        know_s9()
     elif name2 is "s10":
-        know_s10()   
+        know_s10()
     elif name2 is "s11":
         know_s11()
     elif name2 is "ar7":
-        know_ar7()       
+        know_ar7()
     elif name2 is "a4":
-        know_a4()    
+        know_a4()
     elif name2 is "a5":
-        know_a5()    
+        know_a5()
     elif name2 is "a6":
-        know_a6()    
+        know_a6()
     elif name2 is "ar7":
-        know_a7()    
+        know_a7()
     elif name2 is "a8":
-        know_a8()     
+        know_a8()
 
 
 def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
@@ -376,48 +376,48 @@ def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":  
+    if name1 is "s8":
         know_s8()
     elif name1 is "s9":
-        know_s9()    
+        know_s9()
     elif name1 is "s10":
-        know_s10()   
+        know_s10()
     elif name1 is "s11":
         know_s11()
     elif name1 is "ar7":
-        know_ar7()       
+        know_ar7()
     elif name1 is "a4":
-        know_a4()    
+        know_a4()
     elif name1 is "a5":
-        know_a5()    
+        know_a5()
     elif name1 is "a6":
-        know_a6()    
+        know_a6()
     elif name1 is "ar7":
-        know_a7()    
+        know_a7()
     elif name1 is "a8":
-        know_a8()     
+        know_a8()
 
 
     if name2 is "s8":
         know_s8()
     elif name2 is "s9":
-        know_s9()    
+        know_s9()
     elif name2 is "s10":
-        know_s10()   
+        know_s10()
     elif name2 is "s11":
         know_s11()
     elif name2 is "ar7":
-        know_ar7()       
+        know_ar7()
     elif name2 is "a4":
-        know_a4()    
+        know_a4()
     elif name2 is "a5":
-        know_a5()    
+        know_a5()
     elif name2 is "a6":
-        know_a6()    
+        know_a6()
     elif name2 is "ar7":
-        know_a7()    
+        know_a7()
     elif name2 is "a8":
-        know_a8()     
+        know_a8()
 
 
 
@@ -429,21 +429,21 @@ def set_similar(name1, name2): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":  
+    if name1 is "s8":
         know_s8()
     elif name1 is "s9":
-        know_s9()    
+        know_s9()
     elif name1 is "s10":
-        know_s10()   
+        know_s10()
     elif name1 is "s11":
         know_s11()
 
     if name2 is "s8":
         know_s8()
     elif name2 is "s9":
-        know_s9()    
+        know_s9()
     elif name2 is "s10":
-        know_s10()   
+        know_s10()
     elif name2 is "s11":
         know_s11()
 
@@ -455,21 +455,21 @@ def set_congruent(name1, name2): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":  
+    if name1 is "s8":
         know_s8()
     elif name1 is "s9":
-        know_s9()    
+        know_s9()
     elif name1 is "s10":
-        know_s10()   
+        know_s10()
     elif name1 is "s11":
         know_s11()
 
     if name2 is "s8":
         know_s8()
     elif name2 is "s9":
-        know_s9()    
+        know_s9()
     elif name2 is "s10":
-        know_s10()   
+        know_s10()
     elif name2 is "s11":
         know_s11()
 
@@ -481,21 +481,21 @@ def set_tan(name1, name2): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":  
+    if name1 is "s8":
         know_s8()
     elif name1 is "s9":
-        know_s9()    
+        know_s9()
     elif name1 is "s10":
-        know_s10()   
+        know_s10()
     elif name1 is "s11":
         know_s11()
 
     if name2 is "s8":
         know_s8()
     elif name2 is "s9":
-        know_s9()    
+        know_s9()
     elif name2 is "s10":
-        know_s10()   
+        know_s10()
     elif name2 is "s11":
         know_s11()
 
@@ -505,67 +505,67 @@ def set_tan(name1, name2): #When a “parallel” predicate is given
 def know_s8():
     print ("s8 known, and being tested")
     if parallel.has("s8", "s10"):
-       set_equal("a5","a7")           
-       set_equal("a8","a6")   
+       set_equal("a5","a7")
+       set_equal("a8","a6")
     if parallel.has("s8", "s11"):
-       set_sum_value("a4","a8","180")   
+       set_sum_value("a4","a8","180")
     if parallel.has("s8", "s9"):
-       set_sum_value("a4","a7","180")  
+       set_sum_value("a4","a7","180")
     if set_perpendicular("s8","s9"):
-        set_sum_value("a4","a7","90")    
+        set_sum_value("a4","a7","90")
     if set_perpendicular("s8","s11"):
-        set_sum_value("a4","a8","90")   
- 
-         
+        set_sum_value("a4","a8","90")
+
+
 
 def know_s9():
     print ("s9 known, and being tested")
     if equal.has("s9", "s10"):
-       set_equal("a5","a4")           
+       set_equal("a5","a4")
     if equal.has("s9", "s11"):
-       set_equal("a5","a6") 
+       set_equal("a5","a6")
     if parallel.has("s8", "s9"):
-       set_sum_value("a4","a7","180")  
+       set_sum_value("a4","a7","180")
     if set_perpendicular("s8","s9"):
-        set_sum_value("a4","a7","90") 
+        set_sum_value("a4","a7","90")
     if set_perpendicular("s10","s9"):
-        set_sum_value("a4","a5","90") 
+        set_sum_value("a4","a5","90")
     if set_perpendicular("s11","s9"):
-        set_sum_value("a5","a6","90") 
+        set_sum_value("a5","a6","90")
 
 def know_s10():
     print ("s10 known, and being tested")
     if parallel.has("s8", "s10"):
-       set_equal("a5","a7")           
-       set_equal("a8","a6")  
+       set_equal("a5","a7")
+       set_equal("a8","a6")
     if equal.has("s9", "s10"):
-       set_equal("a5","a6")  
+       set_equal("a5","a6")
     if equal.has("s11", "s10"):
-       set_equal("a4","a6")  
+       set_equal("a4","a6")
     if set_perpendicular("s10","s9"):
-        set_sum_value("a4","a5","90") 
+        set_sum_value("a4","a5","90")
     if set_perpendicular("s10","s11"):
-        set_sum_value("a4","a6","90") 
+        set_sum_value("a4","a6","90")
 
 def know_s11():
     print ("s11 known, and being tested")
     if parallel.has("s8", "s11"):
-       set_sum_value("a4","a8","180")  
+       set_sum_value("a4","a8","180")
     if set_perpendicular("s8","s11"):
-        set_sum_value("a4","a8","90") 
+        set_sum_value("a4","a8","90")
     if set_perpendicular("s11","s10"):
-        set_sum_value("a4","a6","90") 
+        set_sum_value("a4","a6","90")
     if set_perpendicular("s11","s9"):
-        set_sum_value("a5","a6","90") 
+        set_sum_value("a5","a6","90")
     if equal.has("s9", "s11"):
-       set_equal("a5","a6")  
+       set_equal("a5","a6")
     if equal.has("s11", "s10"):
-       set_equal("a4","a6")  
+       set_equal("a4","a6")
 
 def know_a4():
     print ("a4 known, and being tested" )
     if equal.has("a4", "a5"):
-       set_equal("s9","s10")  
+       set_equal("s9","s10")
     if equal.has("a4", "a6"):
        set_equal("s11","s10")
     if sum_value.has("a4","a5","90"):
@@ -575,14 +575,14 @@ def know_a4():
 
     #if equal.has("a4", "a7"):
     #   set_equal("s11","s10")
- 
+
 
 def know_a5():
     print ("a5 known, and being tested" )
     if equal.has("a4", "a5"):
-       set_equal("s9","s10")  
+       set_equal("s9","s10")
     if equal.has("a5", "a6"):
-       set_equal("s11","s9")  
+       set_equal("s11","s9")
     if equal.has("a7","a5"):
         set_parallel("s10","s8")
     if sum_value.has("a4","a5","90"):
@@ -593,11 +593,11 @@ def know_a5():
 def know_a6():
     print ("a6 known, and being tested" )
     if equal.has("a6", "a5"):
-       set_equal("s9","s11")  
+       set_equal("s9","s11")
     if equal.has("a4", "a6"):
        set_equal("s11","s10")
     if equal.has("a8","a6"):
-        set_parallel("s10","s8")  
+        set_parallel("s10","s8")
     if sum_value.has("a6","a5","90"):
         set_perpendicular("s9","s11")
     if sum_value.has("a4","a6","90"):
@@ -614,20 +614,20 @@ def know_a7():
     if sum_value.has("a7","a4","90"):
         set_perpendicular("s8","s9")
 
-    #   set_sum_value("a4","a7","180")  
+    #   set_sum_value("a4","a7","180")
     #if set_perpendicular("s8","s9"):
-    #    set_sum_value("a4","a7","90") 
+    #    set_sum_value("a4","a7","90")
 
 def know_a8():
     print ("a8 known, and being tested" )
     if equal.has("a8","a6"):
-        set_parallel("s10","s8") 
+        set_parallel("s10","s8")
     if sum_value.has("a7","a8",sum_value.get_sum("a7","a8")):
         set_sum_value("a7","a8",sum_value.get_sum("a7","a8"))
     if sum_value.has("a8","a4","180"):
         set_parallel("s8","s11")
     if sum_value.has("a8","a4","90"):
-        set_perpendicular("s11","s8") 
+        set_perpendicular("s11","s8")
 
 def know_ar7():
     print ("ar7 known, but useless in this problem" )
@@ -650,7 +650,7 @@ def get_all():
 
     print(outputdict)
     return outputdict
-    
+
     #leftovers
     #testdict = {
     #"parallel": ["s8","s11"],

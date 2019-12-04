@@ -3,7 +3,7 @@
 def print_license():
     print("""
             License:
-                Copyright [2019]: Marshall Manuel Macedonio
+                Copyright [2019]: Marshall Payatt, Manuel Macedonio
                 University of California, Irvine
                 Licensed under the Apache License, Version 2.0 (the "License");
                 you may not use this file except in compliance with the License.

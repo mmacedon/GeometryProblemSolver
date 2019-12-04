@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import documentation.license
 import documentation.help
+from helperfunctions import *
+from A242 import *
 
 try:
     from PIL import Image
@@ -57,10 +59,11 @@ def main():
             license.print_license()
         elif ( user_input == "-help"):
             help.print_help()
-        elif("circle" in user_input or "Circle" in user_input):
-            solver_problem_1(user_input)
         elif ("Line" in user_input or "line" in user_input):
-            solver_problem_2(user_input)
+            solver_problem_1(user_input)
+        elif("circle" in user_input or "Circle" in user_input):
+            parsed_input = parseinput(user_input)
+            solver_problem_2(parsed_input)
         else:
             print("Invalid Input\n")
             print("Enter -help for help using the solver.")
