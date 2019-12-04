@@ -56,9 +56,9 @@ def main():
         if ( user_input == "-quit" ):
             break
         elif ( user_input == "-license"):
-            license.print_license()
+            documentation.license.print_license()
         elif ( user_input == "-help"):
-            help.print_help()
+            documentation.help.print_help()
         elif ("Line" in user_input or "line" in user_input):
             solver_problem_1(user_input)
         elif("circle" in user_input or "Circle" in user_input):

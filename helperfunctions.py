@@ -61,5 +61,8 @@ def parseinput( input ):
                 current = current.split(' ')
                 current = current[1]
                 parsed_input[i][1][j] = current
-
+            elif ( ')' in current ):
+                current = current.split(')')
+                current = current[0]
+                parsed_input[i][1][j] = current
     return parsed_input

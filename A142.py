@@ -663,13 +663,13 @@ def get_all():
 
 
 #testing main
-print("parameter 1 test")
-set_parallel("s8","s11")
-print("parameter 2 test")
-set_equal("a4","a6")
-print("parameter 3 test")
-set_sum_value("a7","a8","90")
-get_all()
+#print("parameter 1 test")
+#set_parallel("s8","s11")
+#print("parameter 2 test")
+#set_equal("a4","a6")
+#print("parameter 3 test")
+#set_sum_value("a7","a8","90")
+#get_all()
 
 
 
