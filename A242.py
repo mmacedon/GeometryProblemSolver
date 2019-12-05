@@ -1197,7 +1197,7 @@ def know_a2():
     elif sum_value_predicate.has('a2', 'a3', '90'):
         set_perpendicular('s2', 's3')
 
-def a3():
+def know_a3():
     print("a3 known, but undefined")
 
     if equal_predicate.has('a3', 'a1') and tan_predicate.has('s3', 'arc3') and equal_predicate.has('s7', 's2') and fraction_predicate.has('s6', 's3', '2'):
