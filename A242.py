@@ -245,7 +245,6 @@ def set_perpendicular(name1, name2): #When a “perpendicular” predicate is gi
         return False
 
     perpendicular_predicate.make_perpendicular(name1, name2)#calls function that actually makes them perpendicular
-    print("\nPerpendicular Inputs: %s %s\n" % (name1, name2))
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
     if name1 =='s1':
@@ -1341,7 +1340,7 @@ def know_arc3():
     elif tan_predicate.has('arc3', 's3') and equal_predicate.has('a1', 'a2') and equal_predicate.has('ar4', 'ar3'):
         set_equal('s2', 's4')
     elif tan_predicate.has('arc3', 's3') and equal_predicate.has('ar4', 'ar3') and equal_predicate.has('s2', 's4'):
-         set_equal('a1', 'a2')
+        set_equal('a1', 'a2')
 
     #This one concerns 2
     if fraction_predicate.has('arc3', 'arc5') and equal_predicate.has('s6', 's4') and equal_predicate.has('a1', 'a2') and fraction_predicate.has('s3', 's7') and fraction_predicate.get_fraction('arc3', 'arc5') == '2' and fraction_predicate.get_fraction('s3', 's7') == '2':
@@ -1472,6 +1471,8 @@ def remove(predicate_list, A, B):
     return new_predicates
 
 def remove_input_predicates(predicates):
+
+    tan_predicate.relationships = remove(tan_predicate.relationships, 's3', 'arc3')
     for predicate in predicates:
         if predicate[0] == 'set_parallel':
             if parallel_predicate.has(predicate[1][0], predicate[1][1]):
@@ -1499,28 +1500,20 @@ def remove_input_predicates(predicates):
 
 def get_all(predicates):
 
-    print("NOTE: FOR THIS PROBLEM, THE ASSUMPTION IS HELD THAT S3 BEING TANGENT TO ARC3\n")
-    print("CREATES A BISECTOR OF ARC3")
     for predicate in predicates:
         if predicate[0] == 'set_parallel':
             print("Parallel is not applicable to this problem.\n")
         elif predicate[0] == 'set_perpendicular':
-            print(predicate[0])
             set_perpendicular(predicate[1][0], predicate[1][1])
         elif predicate[0] == 'set_equal':
-            print(predicate[0])
             set_equal(predicate[1][0], predicate[1][1])
         elif predicate[0] == 'set_fraction':
-            print(predicate[0])
             set_fraction(predicate[1][0], predicate[1][1], predicate[1][2])
         elif predicate[0] == 'set_sum_value':
-            print(predicate[0])
             set_sum_value(predicate[1][0], predicate[1][1], predicate[1][2])
         elif predicate[0] == 'set_congruent':
-            print(predicate[0])
             print("Congruent is not a valid input for this problem")
         elif predicate[0] == 'set_tan':
-            print(predicate[0])
             set_tan(predicate[1][0], predicate[1][1])
         else:
             print("There was an error with the predicate %s\n" % predicate[0])
@@ -1539,6 +1532,9 @@ def solver_problem_2(predicates):
     #    return -1
 
     reset_predicates()
+    print("Note: For this problem, the assumption is held that s3 being tangent to ar3")
+    print("creates a bisector of arc3 and vice versa")
+    print("set_tan(s3, arc3) will automatically be an input predicate since it is a given in the problem.")
     print("Input Predicates: ")
     print(predicates)
     print("\n")

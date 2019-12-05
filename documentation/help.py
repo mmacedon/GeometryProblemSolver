@@ -24,7 +24,7 @@ def print_help():
                     >> set_tan(name1, name2)
                         Ex: set_tan(s2,s4)
                 Inputs can be atmost 3 geomertic predicates.
-                    >> set_parallel(name1, name2), set_perpendicular(name3, name4), set_fraction(name5, name6, 1/n)
+                    >> set_parallel(name1, name2), set_perpendicular(name3, name4), set_fraction(name5, name6, n)
                 Prepend the name of the problem to solve:
-                    >> Circle and Triangle set_parallel(name1, name2), set_perpendicular(name3, name4), set_fraction(name5, name6, 1/n)
+                    >> Circle and Triangle set_parallel(name1, name2), set_perpendicular(name3, name4), set_fraction(name5, name6, n)
           """)

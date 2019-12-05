@@ -33,13 +33,13 @@ def main():
             For Usage of Program: Input Three or More Predicates in the Following
             Format: [problem] [predicate name](parameter_1, parameter_2,..., parameter_n)
             The Problems are:
-                - Circle and Triangle
-                - Line and Triangle
+                Circle and Triangle
+                Line and Triangle
             Use the images presented to choose the parameters.
             Allow the images to load.
             For Help: -help
             For License: -license
-            For Testing: -test
+            For Random Testing: -test
             For Exiting: -quit
             GitHub: https://github.com/mmacedon/GeometryProblemSolver
         """)
@@ -64,6 +64,7 @@ def main():
         elif ( user_input == "-test"):
             run_test()
         elif ("Line" in user_input or "line" in user_input):
+            parsed_input = parseinput(user_input)
             solver_problem_1(user_input)
         elif("circle" in user_input or "Circle" in user_input):
             parsed_input = parseinput(user_input)
