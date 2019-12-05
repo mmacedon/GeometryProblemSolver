@@ -775,16 +775,16 @@ def know_s1():
 
     #SET FRACTION PREDICATE
     if fraction_predicate.has('s1', 's2', 'n'):
-        set_fraction('s1', 's4')
+        set_fraction('s1', 's4', 'n')
     elif fraction_predicate.has('s1', 's4', 'n'):
-        set_fraction('s1', 's2')
+        set_fraction('s1', 's2', 'n')
 
     if fraction_predicate.has('s1', 'arc1', 'n') and congruent_predicate.has('ar2', 'ar5'):
-        set_fraction('s5', 'arc4')
+        set_fraction('s5', 'arc4', 'n')
     elif fraction_predicate.has('s1', 's5', 'n') and congruent_predicate.has('ar2', 'ar5'):
-        set_fraction('arc1', 'arc4')
+        set_fraction('arc1', 'arc4', 'n')
     elif fraction_predicate.has('s1', 'arc4', 'n') and congruent_predicate.has('ar2', 'ar5'):
-        set_fraction('s5', 'arc1')
+        set_fraction('s5', 'arc1', 'n')
 
     #EXHAUST ALL THE FRACTION COMBINATIONS
     check_fractional_predicates('s1')
@@ -844,7 +844,7 @@ def know_s2():
 
 
     if fraction_predicate.has('s2', 's3', 'n') and congruent_predicate.has('ar4', 'ar3'):
-        set_fraction('s3', 's4')
+        set_fraction('s3', 's4', 'n')
     elif fraction_predicate.has('s2', 's3', 'n') and fraction_predicate.has('s3', 's4', 'n') and equal.has('a1', 'a2'):
         set_equal('ar4', 'ar3')
     elif fraction_predicate.has('s3', 's2', 'n') and fraction_predicate.has('s3', 's4', 'n') and congruent_predicate.has('ar4', 'ar3'):
@@ -879,9 +879,9 @@ def know_s3():
 
     #SET_FRACTION
     if fraction_predicate.has('s3', 's2', 'n') and equal_predicate.has('s2', 's4'):
-        set_fraction('s3', 's4')
+        set_fraction('s3', 's4', 'n')
     elif fraction_predicate.has('s3', 's4', 'n') and equal_predicate.has('s2', 's4'):
-        set_fraction('s3','s2')
+        set_fraction('s3','s2', 'n')
 
 
     #CAN THE SIDE S3 BE SMALLER THAN ANY OTHER SIDE S, OR MUST IT BE THE BIGGEST
@@ -978,7 +978,7 @@ def know_s5():
         set_fraction('s5', 's2', 'n')
 
     if fraction_predicate.has('s5', 'arc5', 'n') and equal_predicate.has('ar2', 'ar5'):
-        set_fraction('s1', 'arc1')
+        set_fraction('s1', 'arc1', 'n')
     elif fraction_predicate.has('s1', 's5', 'n') and congruent_predicate.has('ar2', 'ar5'):
         set_fraction('arc1', 'arc4', 'n')
     elif fraction_predicate.has('s5', 'arc1', 'n') and congruent_predicate.has('ar2', 'ar5'):
