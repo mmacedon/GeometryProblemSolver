@@ -33,13 +33,13 @@ def main():
             For Usage of Program: Input Three or More Predicates in the Following
             Format: [problem] [predicate name](parameter_1, parameter_2,..., parameter_n)
             The Problems are:
-                Circle and Triangle
-                Line and Triangle
+                - Circle and Triangle
+                - Line and Triangle
             Use the images presented to choose the parameters.
             Allow the images to load.
             For Help: -help
             For License: -license
-            For Random Testing: -test
+            For Testing: -test
             For Exiting: -quit
             GitHub: https://github.com/mmacedon/GeometryProblemSolver
         """)

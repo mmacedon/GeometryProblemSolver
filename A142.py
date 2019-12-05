@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import random
 
 testdict = {
     "NULL": ["NULL"]
@@ -635,7 +636,35 @@ def know_ar7():
 
 
 
-def get_all():
+def get_all(predicates):
+
+    #added in later in development
+    print("NOTE: FOR THIS PROBLEM, THE ASSUMPTION IS HELD THAT S3 BEING TANGENT TO ARC3\n")
+    print("CREATES A BISECTOR OF ARC3")
+    for predicate in predicates:
+        if predicate[0] == 'set_parallel':
+            print("Parallel is not applicable to this problem.\n")
+        elif predicate[0] == 'set_perpendicular':
+            print(predicate[0])
+            set_perpendicular(predicate[1][0], predicate[1][1])
+        elif predicate[0] == 'set_equal':
+            print(predicate[0])
+            set_equal(predicate[1][0], predicate[1][1])
+        elif predicate[0] == 'set_fraction':
+            print(predicate[0])
+            set_fraction(predicate[1][0], predicate[1][1], predicate[1][2])
+        elif predicate[0] == 'set_sum_value':
+            print(predicate[0])
+            set_sum_value(predicate[1][0], predicate[1][1], predicate[1][2])
+        elif predicate[0] == 'set_congruent':
+            print(predicate[0])
+            print("Congruent is not a valid input for this problem")
+        elif predicate[0] == 'set_tan':
+            print(predicate[0])
+            set_tan(predicate[1][0], predicate[1][1])
+        else:
+            print("There was an error with the predicate %s\n" % predicate[0])
+
 
     if len(outputdict) == 1:#check for when dictionary is functionally empty and returns null
         print("NULL")
@@ -659,6 +688,102 @@ def get_all():
     #}
     #mydict = dict(testdict)
     #print(testdict)
+
+
+
+#extra functions to interface with the main
+#DEF CHECK_EQUAL_FRACTION_PREDICATES
+def reset_predicates():
+    parallel.relationships = []
+    perpendicular.relationships = []
+    equal.relationships = []
+    fraction.relationships = []
+    sum_value.relationships = []
+    similar.relationships = []
+    congruent.relationships = []
+    tan.relationships = []
+
+def solver_problem_1(predicates):
+    dict_response = None
+    available_variables = ['s8','s9','s10','s11', 'a4','a5', 'a6', 'a7', 'a8','ar7','1/n', 'n']
+
+    reset_predicates()
+    print("Input Predicates: ")
+    print(predicates)
+    print("\n")
+    dict_response = get_all(predicates)
+    print('Output Predicates: ')
+    for k, v in dict_response.items():
+        print(k, v)
+    print("\n")
+
+def run_test():
+    selection = ['side_var', 'angle_var']
+    side_var = ['s8', 's9', 's10', 's11']
+    angle_var = ['a4', 'a5', 'a6', 'a7', 'a8']
+    #area_var = ['ar7']
+    predicates = ['set_parallel', 'set_perpendicular', 'set_equal', 'set_fraction', 'set_sum_value']
+    sum_value_int = ['90','180']
+
+    amount_of_predicates = random.randint(1,4)
+    test = []
+
+    for i in range(amount_of_predicates):
+        predicate = predicates[random.randint(0,5)]
+        if predicate == 'set_sum_value':
+            p1 = angle_var[random.randint(0,4)]
+            p2 = angle_var[random.randint(0,4)]
+            s1 = sum_value_int[random.randint(0,1)]
+            while p1 == p2:
+                p2 = angle_var[random.randint(0,4)]
+            test.append([predicate,[p1,p2,s1]])
+            continue
+        elif predicate == 'set_perpendicular':
+            p1 = side_var[random.randint(0,3)]
+            p2 = side_var[random.randint(0,3)]
+            while p1 == p2:
+                p2 = side_var[random.randint(0,3)]
+        elif predicate == 'set_equal':
+            select = selection[random.randint(0,1)]
+            if select == 'side_var':
+                p1 = side_var[random.randint(0,3)]
+                p2 = side_var[random.randint(0,3)]
+                while p1 == p2:
+                    p2 = side_var[random.randint(0,3)]
+            elif select == 'angle_var':
+                p1 = angle_var[random.randint(0,4)]
+                p2 = angle_var[random.randint(0,4)]
+                while p1 == p2:
+                    p2 = angle_var[random.randint(0,4)]
+            
+        elif predicate == 'set_fraction':
+            select = selection[random.randint(0,1)]
+            if select == 'side_var':
+                p1 = side_var[random.randint(0,3)]
+                p2 = side_var[random.randint(0,3)]
+                while p1 == p2:
+                    p2 = side_var[random.randint(0,3)]
+            elif select == 'angle_var':
+                p1 = angle_var[random.randint(0,4)]
+                p2 = angle_var[random.randint(0,4)]
+                while p1 == p2:
+                    p2 = angle_var[random.randint(0,4)]
+            test.append([predicate,[p1,p2,'2']])
+            continue
+
+        elif predicate == 'set_parallel':
+            continue
+        if not([predicate, [p1, p2]] in test):
+            test.append([predicate, [p1, p2]])
+
+    print("Running Test...\n")
+    print("Test Input: ")
+    print(test)
+    print('\n')
+    solver_problem_1(test)
+
+
+
 
 
 
