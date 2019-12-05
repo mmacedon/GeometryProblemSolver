@@ -3,6 +3,7 @@ import documentation.license
 import documentation.help
 from helperfunctions import *
 from A242 import *
+from A142 import *
 
 try:
     from PIL import Image
@@ -38,6 +39,7 @@ def main():
             Allow the images to load.
             For Help: -help
             For License: -license
+            For Testing: -test
             For Exiting: -quit
             GitHub: https://github.com/mmacedon/GeometryProblemSolver
         """)
@@ -59,6 +61,8 @@ def main():
             documentation.license.print_license()
         elif ( user_input == "-help"):
             documentation.help.print_help()
+        elif ( user_input == "-test"):
+            run_test()
         elif ("Line" in user_input or "line" in user_input):
             solver_problem_1(user_input)
         elif("circle" in user_input or "Circle" in user_input):
