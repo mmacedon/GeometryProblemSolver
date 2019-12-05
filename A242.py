@@ -80,9 +80,9 @@ class sum_value:
         if [a, b, n] in self.relationships or [b, a, n] in self.relationships:
             return
         else:
-            relationships.append([a,b, n])
+            self.relationships.append([a,b, n])
 
-    def has(self, a, b):
+    def has(self, a, b, n):
         if [a, b, n] in self.relationships or [a, b, n] in self.relationships:
             return True
         else:
@@ -96,7 +96,7 @@ class similar:
         if [a, b] in self.relationships or [b, a] in self.relationships:
             return
         else:
-            relationships.append([a,b])
+            self.relationships.append([a,b])
 
     def has(self, a, b):
         if [a, b] in self.relationships or [b, a] in self.relationships:
@@ -112,7 +112,7 @@ class congruent:
         if [a, b] in self.relationships or [b,a] in self.relationships:
             return
         else:
-            relationships.append([a,b])
+            self.relationships.append([a,b])
 
     def has(self, a, b):
         if [a, b] in self.relationships or [b, a] in self.relationships:
@@ -129,7 +129,7 @@ class tan:
         if [a, b] in self.relationships or [b, a] in self.relationships:
             return
         else:
-            relationships.append([a,b])
+            self.relationships.append([a,b])
 
     def has(self, a, b):
         if [a,b] in self.relationships or [b, a] in self.relationships:
@@ -159,62 +159,62 @@ def set_parallel(name1, name2): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is 's1':
+    if name1 =='s1':
         know_s1()
-    elif name1 is 's2':
+    elif name1 =='s2':
         know_s2()
-    elif name1 is 's3':
+    elif name1 =='s3':
         know_s3()
-    elif name1 is 's4':
+    elif name1 =='s4':
         know_s4()
-    elif name1 is 's5':
+    elif name1 =='s5':
         know_s5()
-    elif name1 is 's6':
+    elif name1 =='s6':
         know_s6()
-    elif name1 is 's7':
+    elif name1 =='s7':
         know_s7()
-    elif name1 is 'a1':
+    elif name1 =='a1':
         know_a1()
-    elif name1 is 'a2':
+    elif name1 =='a2':
         know_a2()
-    elif name1 is 'a3':
+    elif name1 =='a3':
         know_a3()
-    elif name1 is 'arc1':
+    elif name1 =='arc1':
         know_arc1()
-    elif name1 is 'arc3':
+    elif name1 =='arc3':
         know_arc3()
-    elif name1 is 'arc4':
+    elif name1 =='arc4':
         know_arc4()
-    elif name1 is 'arc5':
+    elif name1 =='arc5':
         know_arc5()
 
-    if name2 is 's1':
+    if name2 =='s1':
         know_s1()
-    elif name2 is 's2':
+    elif name2 =='s2':
         know_s2()
-    elif name2 is 's3':
+    elif name2 =='s3':
         know_s3()
-    elif name2 is 's4':
+    elif name2 =='s4':
         know_s4()
-    elif name2 is 's5':
+    elif name2 =='s5':
         know_s5()
-    elif name2 is 's6':
+    elif name2 =='s6':
         know_s6()
-    elif name2 is 's7':
+    elif name2 =='s7':
         know_s7()
-    elif name2 is 'a1':
+    elif name2 =='a1':
         know_a1()
-    elif name2 is 'a2':
+    elif name2 =='a2':
         know_a2()
-    elif name2 is 'a3':
+    elif name2 =='a3':
         know_a3()
-    elif name2 is 'arc1':
+    elif name2 =='arc1':
         know_arc1()
-    elif name2 is 'arc3':
+    elif name2 =='arc3':
         know_arc3()
-    elif name2 is 'arc4':
+    elif name2 =='arc4':
         know_arc4()
-    elif name2 is 'arc5':
+    elif name2 =='arc5':
         know_arc5()
 
 def set_perpendicular(name1, name2): #When a “perpendicular” predicate is given
@@ -225,62 +225,62 @@ def set_perpendicular(name1, name2): #When a “perpendicular” predicate is gi
     print("\nPerpendicular Inputs: %s %s\n" % (name1, name2))
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is 's1':
+    if name1 =='s1':
         know_s1()
-    elif name1 is 's2':
+    elif name1 =='s2':
         know_s2()
-    elif name1 is 's3':
+    elif name1 =='s3':
         know_s3()
-    elif name1 is 's4':
+    elif name1 =='s4':
         know_s4()
-    elif name1 is 's5':
+    elif name1 =='s5':
         know_s5()
-    elif name1 is 's6':
+    elif name1 =='s6':
         know_s6()
-    elif name1 is 's7':
+    elif name1 =='s7':
         know_s7()
-    elif name1 is 'a1':
+    elif name1 =='a1':
         know_a1()
-    elif name1 is 'a2':
+    elif name1 =='a2':
         know_a2()
-    elif name1 is 'a3':
+    elif name1 =='a3':
         know_a3()
-    elif name1 is 'arc1':
+    elif name1 =='arc1':
         know_arc1()
-    elif name1 is 'arc3':
+    elif name1 =='arc3':
         know_arc3()
-    elif name1 is 'arc4':
+    elif name1 =='arc4':
         know_arc4()
-    elif name1 is 'arc5':
+    elif name1 =='arc5':
         know_arc5()
 
-    if name2 is 's1':
+    if name2 =='s1':
         know_s1()
-    elif name2 is 's2':
+    elif name2 =='s2':
         know_s2()
-    elif name2 is 's3':
+    elif name2 =='s3':
         know_s3()
-    elif name2 is 's4':
+    elif name2 =='s4':
         know_s4()
-    elif name2 is 's5':
+    elif name2 =='s5':
         know_s5()
-    elif name2 is 's6':
+    elif name2 =='s6':
         know_s6()
-    elif name2 is 's7':
+    elif name2 =='s7':
         know_s7()
-    elif name2 is 'a1':
+    elif name2 =='a1':
         know_a1()
-    elif name2 is 'a2':
+    elif name2 =='a2':
         know_a2()
-    elif name2 is 'a3':
+    elif name2 =='a3':
         know_a3()
-    elif name2 is 'arc1':
+    elif name2 =='arc1':
         know_arc1()
-    elif name2 is 'arc3':
+    elif name2 =='arc3':
         know_arc3()
-    elif name2 is 'arc4':
+    elif name2 =='arc4':
         know_arc4()
-    elif name2 is 'arc5':
+    elif name2 =='arc5':
         know_arc5()
 
 def set_equal(name1, name2): #Similar to above
@@ -288,70 +288,70 @@ def set_equal(name1, name2): #Similar to above
         return False
 
     equal_predicate.make_equal(name1, name2)#calls function that actually makes them parallel
-    print("\nEqual Inputs: \n")
-    print(name1 + name2 + '\n')
+    print("\nEqual Inputs: %s %s\n" % (name1, name2))
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is 's1':
+    if name1 == 's1':
+        print('Call Know_s1()')
         know_s1()
-    elif name1 is 's2':
+    elif name1 =='s2':
         know_s2()
-    elif name1 is 's3':
+    elif name1 =='s3':
         know_s3()
-    elif name1 is 's4':
+    elif name1 =='s4':
         know_s4()
-    elif name1 is 's5':
+    elif name1 =='s5':
         know_s5()
-    elif name1 is 's6':
+    elif name1 =='s6':
         know_s6()
-    elif name1 is 's7':
+    elif name1 =='s7':
         know_s7()
-    elif name1 is 'a1':
+    elif name1 =='a1':
         know_a1()
-    elif name1 is 'a2':
+    elif name1 =='a2':
         know_a2()
-    elif name1 is 'a3':
+    elif name1 =='a3':
         know_a3()
-    elif name1 is 'arc1':
+    elif name1 =='arc1':
         know_arc1()
-    elif name1 is 'arc3':
+    elif name1 =='arc3':
         know_arc3()
-    elif name1 is 'arc4':
+    elif name1 =='arc4':
         know_arc4()
-    elif name1 is 'arc5':
+    elif name1 =='arc5':
         know_arc5()
 
-    if name2 is 's1':
+    if name2 =='s1':
         know_s1()
-    elif name2 is 's2':
+    elif name2 =='s2':
         know_s2()
-    elif name2 is 's3':
+    elif name2 =='s3':
         know_s3()
-    elif name2 is 's4':
+    elif name2 =='s4':
         know_s4()
-    elif name2 is 's5':
+    elif name2 =='s5':
         know_s5()
-    elif name2 is 's6':
+    elif name2 =='s6':
         know_s6()
-    elif name2 is 's7':
+    elif name2 =='s7':
         know_s7()
-    elif name2 is 'a1':
+    elif name2 =='a1':
         know_a1()
-    elif name2 is 'a2':
+    elif name2 =='a2':
         know_a2()
-    elif name2 is 'a3':
+    elif name2 =='a3':
         know_a3()
-    elif name2 is 'arc1':
+    elif name2 =='arc1':
         know_arc1()
-    elif name2 is 'arc3':
+    elif name2 =='arc3':
         know_arc3()
-    elif name2 is 'arc4':
+    elif name2 =='arc4':
         know_arc4()
-    elif name2 is 'arc5':
+    elif name2 =='arc5':
         know_arc5()
 
 
-def set_fraction(name1, name2,fraction): #When a “parallel” predicate is given
+def set_fraction(name1, name2,fraction): #When a “parallel” predicate ==given
     if fraction_predicate.has(name1, name2):
         return False
     fraction_predicate.make_fraction(name1, name2, fraction)#calls function that actually makes them parallel
@@ -359,62 +359,62 @@ def set_fraction(name1, name2,fraction): #When a “parallel” predicate is giv
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
     print("\nInputs: %s %s\n" % (name1, name2))
-    if name1 is 's1':
+    if name1 =='s1':
         know_s1()
-    elif name1 is 's2':
+    elif name1 =='s2':
         know_s2()
-    elif name1 is 's3':
+    elif name1 =='s3':
         know_s3()
-    elif name1 is 's4':
+    elif name1 =='s4':
         know_s4()
-    elif name1 is 's5':
+    elif name1 =='s5':
         know_s5()
-    elif name1 is 's6':
+    elif name1 =='s6':
         know_s6()
-    elif name1 is 's7':
+    elif name1 =='s7':
         know_s7()
-    elif name1 is 'a1':
+    elif name1 =='a1':
         know_a1()
-    elif name1 is 'a2':
+    elif name1 =='a2':
         know_a2()
-    elif name1 is 'a3':
+    elif name1 =='a3':
         know_a3()
-    elif name1 is 'arc1':
+    elif name1 =='arc1':
         know_arc1()
-    elif name1 is 'arc3':
+    elif name1 =='arc3':
         know_arc3()
-    elif name1 is 'arc4':
+    elif name1 =='arc4':
         know_arc4()
-    elif name1 is 'arc5':
+    elif name1 =='arc5':
         know_arc5()
 
-    if name2 is 's1':
+    if name2 =='s1':
         know_s1()
-    elif name2 is 's2':
+    elif name2 =='s2':
         know_s2()
-    elif name2 is 's3':
+    elif name2 =='s3':
         know_s3()
-    elif name2 is 's4':
+    elif name2 =='s4':
         know_s4()
-    elif name2 is 's5':
+    elif name2 =='s5':
         know_s5()
-    elif name2 is 's6':
+    elif name2 =='s6':
         know_s6()
-    elif name2 is 's7':
+    elif name2 =='s7':
         know_s7()
-    elif name2 is 'a1':
+    elif name2 =='a1':
         know_a1()
-    elif name2 is 'a2':
+    elif name2 =='a2':
         know_a2()
-    elif name2 is 'a3':
+    elif name2 =='a3':
         know_a3()
-    elif name2 is 'arc1':
+    elif name2 =='arc1':
         know_arc1()
-    elif name2 is 'arc3':
+    elif name2 =='arc3':
         know_arc3()
-    elif name2 is 'arc4':
+    elif name2 =='arc4':
         know_arc4()
-    elif name2 is 'arc5':
+    elif name2 =='arc5':
         know_arc5()
 
 def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
@@ -426,65 +426,65 @@ def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
     print("\nInputs: %s %s\n" % (name1, name2))
-    if name1 is 's1':
+    if name1 =='s1':
         know_s1()
-    elif name1 is 's2':
+    elif name1 =='s2':
         know_s2()
-    elif name1 is 's3':
+    elif name1 =='s3':
         know_s3()
-    elif name1 is 's4':
+    elif name1 =='s4':
         know_s4()
-    elif name1 is 's5':
+    elif name1 =='s5':
         know_s5()
-    elif name1 is 's6':
+    elif name1 =='s6':
         know_s6()
-    elif name1 is 's7':
+    elif name1 =='s7':
         know_s7()
-    elif name1 is 'a1':
+    elif name1 =='a1':
         know_a1()
-    elif name1 is 'a2':
+    elif name1 =='a2':
         know_a2()
-    elif name1 is 'a3':
+    elif name1 =='a3':
         know_a3()
-    elif name1 is 'arc1':
+    elif name1 =='arc1':
         know_arc1()
-    elif name1 is 'arc3':
+    elif name1 =='arc3':
         know_arc3()
-    elif name1 is 'arc4':
+    elif name1 =='arc4':
         know_arc4()
-    elif name1 is 'arc5':
+    elif name1 =='arc5':
         know_arc5()
 
-    if name2 is 's1':
+    if name2 =='s1':
         know_s1()
-    elif name2 is 's2':
+    elif name2 =='s2':
         know_s2()
-    elif name2 is 's3':
+    elif name2 =='s3':
         know_s3()
-    elif name2 is 's4':
+    elif name2 =='s4':
         know_s4()
-    elif name2 is 's5':
+    elif name2 =='s5':
         know_s5()
-    elif name2 is 's6':
+    elif name2 =='s6':
         know_s6()
-    elif name2 is 's7':
+    elif name2 =='s7':
         know_s7()
-    elif name2 is 'a1':
+    elif name2 =='a1':
         know_a1()
-    elif name2 is 'a2':
+    elif name2 =='a2':
         know_a2()
-    elif name2 is 'a3':
+    elif name2 =='a3':
         know_a3()
-    elif name2 is 'arc1':
+    elif name2 =='arc1':
         know_arc1()
-    elif name2 is 'arc3':
+    elif name2 =='arc3':
         know_arc3()
-    elif name2 is 'arc4':
+    elif name2 =='arc4':
         know_arc4()
-    elif name2 is 'arc5':
+    elif name2 =='arc5':
         know_arc5()
 
-def set_similar(name1, name2): #When a “parallel” predicate is given
+def set_similar(name1, name2): #When a “parallel” predicate ==given
     if similar_predicate.has(name1, name2):
         return False
     similar_predicate.make_similar(name1, name2)#calls function that actually makes them parallel
@@ -492,66 +492,66 @@ def set_similar(name1, name2): #When a “parallel” predicate is given
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
     print("\nInputs: %s %s\n" % (name1, name2))
-    if name1 is 's1':
+    if name1 =='s1':
         know_s1()
-    elif name1 is 's2':
+    elif name1 =='s2':
         know_s2()
-    elif name1 is 's3':
+    elif name1 =='s3':
         know_s3()
-    elif name1 is 's4':
+    elif name1 =='s4':
         know_s4()
-    elif name1 is 's5':
+    elif name1 =='s5':
         know_s5()
-    elif name1 is 's6':
+    elif name1 =='s6':
         know_s6()
-    elif name1 is 's7':
+    elif name1 =='s7':
         know_s7()
-    elif name1 is 'a1':
+    elif name1 =='a1':
         know_a1()
-    elif name1 is 'a2':
+    elif name1 =='a2':
         know_a2()
-    elif name1 is 'a3':
+    elif name1 =='a3':
         know_a3()
-    elif name1 is 'arc1':
+    elif name1 =='arc1':
         know_arc1()
-    elif name1 is 'arc3':
+    elif name1 =='arc3':
         know_arc3()
-    elif name1 is 'arc4':
+    elif name1 =='arc4':
         know_arc4()
-    elif name1 is 'arc5':
+    elif name1 =='arc5':
         know_arc5()
 
-    if name2 is 's1':
+    if name2 =='s1':
         know_s1()
-    elif name2 is 's2':
+    elif name2 =='s2':
         know_s2()
-    elif name2 is 's3':
+    elif name2 =='s3':
         know_s3()
-    elif name2 is 's4':
+    elif name2 =='s4':
         know_s4()
-    elif name2 is 's5':
+    elif name2 =='s5':
         know_s5()
-    elif name2 is 's6':
+    elif name2 =='s6':
         know_s6()
-    elif name2 is 's7':
+    elif name2 =='s7':
         know_s7()
-    elif name2 is 'a1':
+    elif name2 =='a1':
         know_a1()
-    elif name2 is 'a2':
+    elif name2 =='a2':
         know_a2()
-    elif name2 is 'a3':
+    elif name2 =='a3':
         know_a3()
-    elif name2 is 'arc1':
+    elif name2 =='arc1':
         know_arc1()
-    elif name2 is 'arc3':
+    elif name2 =='arc3':
         know_arc3()
-    elif name2 is 'arc4':
+    elif name2 =='arc4':
         know_arc4()
-    elif name2 is 'arc5':
+    elif name2 =='arc5':
         know_arc5()
 
 
-def set_congruent(name1, name2): #When a “parallel” predicate is given
+def set_congruent(name1, name2): #When a “parallel” predicate ==given
 
     if congruent_predicate.has(name1, name2):
         return False
@@ -562,65 +562,65 @@ def set_congruent(name1, name2): #When a “parallel” predicate is given
     #there has got to be a better way to do this, might make the call know thing a seperate function later
 
     print("\nInputs: %s %s\n" % (name1, name2))
-    if name1 is 's1':
+    if name1 =='s1':
         know_s1()
-    elif name1 is 's2':
+    elif name1 =='s2':
         know_s2()
-    elif name1 is 's3':
+    elif name1 =='s3':
         know_s3()
-    elif name1 is 's4':
+    elif name1 =='s4':
         know_s4()
-    elif name1 is 's5':
+    elif name1 =='s5':
         know_s5()
-    elif name1 is 's6':
+    elif name1 =='s6':
         know_s6()
-    elif name1 is 's7':
+    elif name1 =='s7':
         know_s7()
-    elif name1 is 'a1':
+    elif name1 =='a1':
         know_a1()
-    elif name1 is 'a2':
+    elif name1 =='a2':
         know_a2()
-    elif name1 is 'a3':
+    elif name1 =='a3':
         know_a3()
-    elif name1 is 'arc1':
+    elif name1 =='arc1':
         know_arc1()
-    elif name1 is 'arc3':
+    elif name1 =='arc3':
         know_arc3()
-    elif name1 is 'arc4':
+    elif name1 =='arc4':
         know_arc4()
-    elif name1 is 'arc5':
+    elif name1 =='arc5':
         know_arc5()
 
-    if name2 is 's1':
+    if name2 =='s1':
         know_s1()
-    elif name2 is 's2':
+    elif name2 =='s2':
         know_s2()
-    elif name2 is 's3':
+    elif name2 =='s3':
         know_s3()
-    elif name2 is 's4':
+    elif name2 =='s4':
         know_s4()
-    elif name2 is 's5':
+    elif name2 =='s5':
         know_s5()
-    elif name2 is 's6':
+    elif name2 =='s6':
         know_s6()
-    elif name2 is 's7':
+    elif name2 =='s7':
         know_s7()
-    elif name2 is 'a1':
+    elif name2 =='a1':
         know_a1()
-    elif name2 is 'a2':
+    elif name2 =='a2':
         know_a2()
-    elif name2 is 'a3':
+    elif name2 =='a3':
         know_a3()
-    elif name2 is 'arc1':
+    elif name2 =='arc1':
         know_arc1()
-    elif name2 is 'arc3':
+    elif name2 =='arc3':
         know_arc3()
-    elif name2 is 'arc4':
+    elif name2 =='arc4':
         know_arc4()
-    elif name2 is 'arc5':
+    elif name2 =='arc5':
         know_arc5()
 
-def set_tan(name1, name2): #When a “parallel” predicate is given
+def set_tan(name1, name2): #When a “parallel” predicate ==given
     if tan_predicate.has(name1, name2):
         return False
 
@@ -629,55 +629,68 @@ def set_tan(name1, name2): #When a “parallel” predicate is given
     #there has got to be a better way to do this, might make the call know thing a seperate function later
 
     print("\nInputs: %s %s\n" % (name1, name2))
-    if name1 is 's1':
+    if name1 =='s1':
         know_s1()
-    elif name1 is 's2':
+    elif name1 =='s2':
         know_s2()
-    elif name1 is 's3':
+    elif name1 =='s3':
         know_s3()
-    elif name1 is 's4':
+    elif name1 =='s4':
         know_s4()
-    elif name1 is 's5':
+    elif name1 =='s5':
         know_s5()
-    elif name1 is 's6':
+    elif name1 =='s6':
         know_s6()
-    elif name1 is 's7':
+    elif name1 =='s7':
         know_s7()
-    elif name1 is 'a1':
+    elif name1 =='a1':
         know_a1()
-    elif name1 is 'a2':
+    elif name1 =='a2':
         know_a2()
-    elif name1 is 'a3':
+    elif name1 =='a3':
         know_a3()
-    elif name1 is 'arc1':
+    elif name1 =='arc1':
         know_arc1()
-    elif name1 is 'arc3':
+    elif name1 =='arc3':
         know_arc3()
-    elif name1 is 'arc4':
+    elif name1 =='arc4':
         know_arc4()
-    elif name1 is 'arc5':
+    elif name1 =='arc5':
         know_arc5()
 
-    if name2 is 's1':
+    if name2 =='s1':
         know_s1()
-    elif name2 is 's2':
+    elif name2 =='s2':
         know_s2()
-    elif name2 is 's3':
+    elif name2 =='s3':
         know_s3()
-    elif name2 is 's4':
+    elif name2 =='s4':
         know_s4()
-    elif name2 is 's5':
+    elif name2 =='s5':
         know_s5()
-    elif name2 is 's6':
+    elif name2 =='s6':
         know_s6()
-    elif name2 is 's7':
+    elif name2 =='s7':
         know_s7()
+    elif name2 =='a1':
+        know_a1()
+    elif name2 =='a2':
+        know_a2()
+    elif name2 =='a3':
+        know_a3()
+    elif name2 =='arc1':
+        know_arc1()
+    elif name2 =='arc3':
+        know_arc3()
+    elif name2 =='arc4':
+        know_arc4()
+    elif name2 =='arc5':
+        know_arc5()
 
 
 
 
-
-#some left as skeleton functions for testing, since calling them is mandatory for functionality
+#some left as skeleton functions for testing, since calling them ==mandatory for functionality
 #FOR THE SET FRACTIONS, INVESTIGATE WHETHER S3 CAN BE SET EQUAL TO ANY OTHER LINE
 #FOR FRACTIONS; SEE IF FOLLOWING CONDITION APPLIES
 # IF (S1 = FRAC_1 * S2 AND S2 == S4) AND (S5 = S4 * FRAC_2) AND FRAC_1 == FRAC_2 THEN S1 == S5
@@ -689,28 +702,28 @@ def check_equal_predicates(name1):
             continue
         if name1 == name2:
             continue
-        for relation in equal_predicate:
+        for relation in equal_predicate.relationships:
             if name1 in relation:
                 continue
             if name2 == relation[0] or name2 == relation[1]:
                 new = relation[0] if name2 == relation[1] else relation[1]
-                if not [name1, new] in equal_predicate and not [new, name1] in equal_predicate:
-                   equal_predicate.append([name1, new])
+                if not equal_predicate.has(name1, new):
+                   set_equal(name1, new)
 
 def check_fractional_predicates(name1):
     names = ['s1', 's2', 's3', 's4', 's5', 's6', 's7']
     for name2 in names:
-        if not [name1, name2] in fraction_predicate and not [name2, name1] in fraction_predicate:
+        if not fraction_predicate.has(name1, name2, 'n'):
             continue
         if name1 == name2:
             continue
-        for relation in equal_predicate:
+        for relation in equal_predicate.relationships:
             if name1 in relation:
                 continue
             if name2 == relation[0] or name2 == relation[1]:
                 new = relation[0] if name2 == relation[1] else relation[1]
-                if not [name1, new] in fraction_predicate and not [new, name1] in fraction_predicate:
-                   fraction_predicate.append([name1, new])
+                if not fraction_predicate.has(name1, new, 'n'):
+                   set_fraction(name1, new, 'n')
 
 def check_similarities():
     #Only 3 conditions to check (ar2, ar5) (ar6, ar4) (ar6, ar3), (ar3, ar4)
@@ -737,7 +750,7 @@ def know_s1():
     #This is gonna be a long night
 
     #SET EQUAL PREDICATE
-    if equal_predicate.has('s1', 's5') and equal_predicate.has('arc1, arc4'):
+    if equal_predicate.has('s1', 's5') and equal_predicate.has('arc1', 'arc4'):
         set_congruent('ar2','ar5')
     elif equal_predicate.has('s1', 's5') and congruent_predicate.has('ar2','ar5'):
         set_equal('arc1','arc4')
@@ -751,16 +764,16 @@ def know_s1():
     check_equal_predicates('s1')
 
     #SET FRACTION PREDICATE
-    if fraction_predicate('s1', 's2'):
+    if fraction_predicate.has('s1', 's2', 'n'):
         set_fraction('s1', 's4')
-    elif fraction_predicate('s1', 's4'):
+    elif fraction_predicate.has('s1', 's4', 'n'):
         set_fraction('s1', 's2')
 
-    if fraction_predicate.has('s1', 'arc1') and congruent_predicate.has('ar2', 'ar5'):
+    if fraction_predicate.has('s1', 'arc1', 'n') and congruent_predicate.has('ar2', 'ar5'):
         set_fraction('s5', 'arc4')
-    elif fraction_predicate.has('s1', 's5') and congruent_predicate.has('ar2', 'ar5'):
+    elif fraction_predicate.has('s1', 's5', 'n') and congruent_predicate.has('ar2', 'ar5'):
         set_fraction('arc1', 'arc4')
-    elif fraction_predicate.has('s1', 'arc4') and congruent_predicate.has('ar2', 'ar5'):
+    elif fraction_predicate.has('s1', 'arc4', 'n') and congruent_predicate.has('ar2', 'ar5'):
         set_fraction('s5', 'arc1')
 
     #EXHAUST ALL THE FRACTION COMBINATIONS
@@ -806,25 +819,25 @@ def know_s2():
 
     #SET FRACTION #A = B * n
     ## Double check this one
-    if fraction_predicate.has('s3', 's2') and equal_predicate.has('a1', 'a2') and congruent.has('ar4', 'ar3'):
-        set_fraction('s3', 's4')
-    elif fraction_predicate.has('s3', 's2') and fraction_predicate.has('s3', 's4') and equal_predicate.has('a1', 'a2'):
+    if fraction_predicate.has('s3', 's2', 'n') and equal_predicate.has('a1', 'a2') and congruent.has('ar4', 'ar3'):
+        set_fraction('s3', 's4', 'n')
+    elif fraction_predicate.has('s3', 's2', 'n') and fraction_predicate.has('s3', 's4', 'n') and equal_predicate.has('a1', 'a2'):
         set_equal('ar4', 'ar3')
-    elif fraction_predicate.has('s3', 's2') and fraction_predicate.has('s3', 's4') and congruent.has('ar3', 'ar4'):
+    elif fraction_predicate.has('s3', 's2', 'n') and fraction_predicate.has('s3', 's4', 'n') and congruent.has('ar3', 'ar4'):
         set_equal('a1', 'a2')
 
-    if fraction_predicate.has('s1', 's2') and congruent_predicate.has('ar2', 'ar5') and equal_predicate.has('arc1', 'arc4'):
-        set_fraction('s5', 's2')
+    if fraction_predicate.has('s1', 's2', 'n') and congruent_predicate.has('ar2', 'ar5') and equal_predicate.has('arc1', 'arc4'):
+        set_fraction('s5', 's2', 'n')
 
-    elif fraction_predicate.has('s5', 's2') and congruent_predicate.has('ar2', 'ar5') and equal_predicate.has('arc1', 'arc4'):
-        set_fraction('s1', 's2')
+    elif fraction_predicate.has('s5', 's2', 'n') and congruent_predicate.has('ar2', 'ar5') and equal_predicate.has('arc1', 'arc4'):
+        set_fraction('s1', 's2', 'n')
 
 
-    if fraction_predicate.has('s2', 's3') and congruent_predicate.has('ar4', 'ar3'):
+    if fraction_predicate.has('s2', 's3', 'n') and congruent_predicate.has('ar4', 'ar3'):
         set_fraction('s3', 's4')
-    elif fraction_predicate.has('s2', 's3') and fraction_predicate.has('s3', 's4') and equal.has('a1', 'a2'):
+    elif fraction_predicate.has('s2', 's3', 'n') and fraction_predicate.has('s3', 's4', 'n') and equal.has('a1', 'a2'):
         set_congruent('ar4', 'ar3')
-    elif fraction_predicate.has('s3', 's2') and fraction_predicate.has('s3', 's4') and congruent_predicate.has('ar4', 'ar3'):
+    elif fraction_predicate.has('s3', 's2', 'n') and fraction_predicate.has('s3', 's4', 'n') and congruent_predicate.has('ar4', 'ar3'):
         set_equal('a1', 'a3')
 
     check_fractional_predicates('s2')
@@ -842,7 +855,7 @@ def know_s3():
     #SET perpendicular
     if perpendicular_predicate.has('s3', 's2') and not perpendicular.has('s3', 's4') and not perpendicular_predicate.has('s7', 's6'):
         set_sum_value('a2', 'a3', '90')
-    elif perpendicular.has('s3', 's4') and not perpendicular_predicate.has('s3', 's2') and not perpendicular_predicate.has('s7', 's6'):
+    elif perpendicular_predicate.has('s3', 's4') and not perpendicular_predicate.has('s3', 's2') and not perpendicular_predicate.has('s7', 's6'):
         set_sum_value('a1', 'a3', '90')
 
     #set EQUAL #not sure how this can be done
@@ -855,9 +868,9 @@ def know_s3():
         set_equal('s2', 's4')
 
     #SET_FRACTION
-    if fraction_predicate.has('s3', 's2') and equal_predicate.has('s2', 's4'):
+    if fraction_predicate.has('s3', 's2', 'n') and equal_predicate.has('s2', 's4'):
         set_fraction('s3', 's4')
-    elif fraction_predicate.has('s3', 's4') and equal_predicate.has('s2', 's4'):
+    elif fraction_predicate.has('s3', 's4', 'n') and equal_predicate.has('s2', 's4'):
         set_fraction('s3','s2')
 
 
@@ -905,23 +918,23 @@ def know_s4():
 
     #SET FRACTION #A = B * n
 ## Double check this one
-    if fraction_predicate.has('s3', 's4') and equal_predicate.has('a1', 'a2') and congruent.has('ar4', 'ar3'):
-        set_fraction('s3', 's2')
-    elif fraction_predicate.has('s3', 's4') and fraction_predicate.has('s3', 's2') and equal_predicate.has('a1', 'a2'):
+    if fraction_predicate.has('s3', 's4', 'n') and equal_predicate.has('a1', 'a2') and congruent.has('ar4', 'ar3'):
+        set_fraction('s3', 's2', 'n')
+    elif fraction_predicate.has('s3', 's4', 'n') and fraction_predicate.has('s3', 's2', 'n') and equal_predicate.has('a1', 'a2'):
         set_equal('ar4', 'ar3')
-    elif fraction_predicate.has('s3', 's4') and fraction_predicate.has('s3', 's2') and congruent.has('ar3', 'ar4'):
+    elif fraction_predicate.has('s3', 's4', 'n') and fraction_predicate.has('s3', 's2', 'n') and congruent.has('ar3', 'ar4'):
         set_equal('a1', 'a2')
 
-    if fraction_predicate.has('s1', 's4') and congruent_predicate.has('ar2', 'ar5') and equal_predicate.has('arc1', 'arc4'):
-        set_fraction('s5', 's4')
-    elif fraction_predicate.has('s5', 's4') and congruent_predicate.has('ar2', 'ar5') and equal_predicate.has('arc1', 'arc4'):
-        set_fraction('s1', 's4')
+    if fraction_predicate.has('s1', 's4', 'n') and congruent_predicate.has('ar2', 'ar5') and equal_predicate.has('arc1', 'arc4'):
+        set_fraction('s5', 's4', 'n')
+    elif fraction_predicate.has('s5', 's4', 'n') and congruent_predicate.has('ar2', 'ar5') and equal_predicate.has('arc1', 'arc4'):
+        set_fraction('s1', 's4', 'n')
 
-    if fraction_predicate.has('s4', 's3') and congruent_predicate.has('ar4', 'ar3'):
-        set_fraction('s3', 's2')
-    elif fraction_predicate.has('s4', 's3') and fraction_predicate.has('s3', 's2') and equal.has('a1', 'a2'):
+    if fraction_predicate.has('s4', 's3', 'n') and congruent_predicate.has('ar4', 'ar3'):
+        set_fraction('s3', 's2', 'n')
+    elif fraction_predicate.has('s4', 's3', 'n') and fraction_predicate.has('s3', 's2', 'n') and equal.has('a1', 'a2'):
         set_congruent('ar4', 'ar3')
-    elif fraction_predicate.has('s3', 's4') and fraction_predicate.has('s3', 's2') and congruent_predicate.has('ar4', 'ar3'):
+    elif fraction_predicate.has('s3', 's4', 'n') and fraction_predicate.has('s3', 's2', 'n') and congruent_predicate.has('ar4', 'ar3'):
         set_equal('a1', 'a3')
 
 
@@ -936,7 +949,7 @@ def know_s5():
     print("s5 known, but undefined")
     #S5 VERY SIMILAR TO S1
 
-    if equal_predicate.has('s1', 's5') and equal_predicate.has('arc1, arc4'):
+    if equal_predicate.has('s1', 's5') and equal_predicate.has('arc1', 'arc4'):
         set_congruent('ar2','ar5')
     elif equal_predicate.has('s1', 's5') and congruent_predicate.has('ar2','ar5'):
         set_equal('arc1','arc4')
@@ -949,17 +962,17 @@ def know_s5():
 
     check_equal_predicates('s5')
     #SET FRACTION PREDICATE
-    if fraction_predicate('s5', 's2'):
-        set_fraction('s5', 's4')
-    elif fraction_predicate('s5', 's4'):
-        set_fraction('s5', 's2')
+    if fraction_predicate.has('s5', 's2', 'n'):
+        set_fraction('s5', 's4', 'n')
+    elif fraction_predicate.has('s5', 's4', 'n'):
+        set_fraction('s5', 's2', 'n')
 
-    if fraction_predicate.has('s5', 'arc5') and equal_predicate.has('ar2', 'ar5'):
+    if fraction_predicate.has('s5', 'arc5', 'n') and equal_predicate.has('ar2', 'ar5'):
         set_fraction('s1', 'arc1')
-    elif fraction_predicate.has('s1', 's5') and congruent_predicate.has('ar2', 'ar5'):
-        set_fraction('arc1', 'arc4')
-    elif fraction_predicate.has('s5', 'arc1') and congruent_predicate.has('ar2', 'ar5'):
-        set_fraction('s1', 'arc4')
+    elif fraction_predicate.has('s1', 's5', 'n') and congruent_predicate.has('ar2', 'ar5'):
+        set_fraction('arc1', 'arc4', 'n')
+    elif fraction_predicate.has('s5', 'arc1', 'n') and congruent_predicate.has('ar2', 'ar5'):
+        set_fraction('s1', 'arc4', 'n')
 
 
     #EXHAUST ALL THE FRACTION COMBINATIONS
@@ -1447,6 +1460,7 @@ def solver_problem_2(predicates):
     #    print("Error! The problem variables must come from the same diagram. Refer to the diagrams for exact naming.\n")
     #    return -1
 
+    reset_predicates()
     print("Input Predicates: ")
     print(predicates)
     print("\n")
