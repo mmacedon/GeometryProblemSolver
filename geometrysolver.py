@@ -65,7 +65,7 @@ def main():
             run_test()
         elif ("Line" in user_input or "line" in user_input):
             parsed_input = parseinput(user_input)
-            solver_problem_1(user_input)
+            solver_problem_1(parsed_input)
         elif("circle" in user_input or "Circle" in user_input):
             parsed_input = parseinput(user_input)
             solver_problem_2(parsed_input)
