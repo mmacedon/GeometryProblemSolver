@@ -773,7 +773,7 @@ def know_s1():
     elif equal_predicate.has('s1', 's5') and equal_predicate.has('ar2','ar5'):
         set_equal('arc1','arc4')
 
-    if equal_predicate.has('s1','s5') and equal_predicate.has('s7', 's6') and equal_predicate.has('s2', 's4'):
+    if equal_predicate.has('s1','s5') and equal_predicate.has('s7', 's6') and equal_predicate.has('s2', 's4') and not (perpendicular_predicate.has('s2', 's3') or perpendicular_predicate('s3', 's4')):
         set_equal('a1', 'a2')
     elif equal_predicate.has('s1', 's5') and equal_predicate.has('s2', 's4') and equal_predicate.has('a1', 'a2'):
         set_equal('s6', 's7')
@@ -855,7 +855,7 @@ def know_s2():
 
     if fraction_predicate.has('s2', 's3') and equal_predicate.has('ar4', 'ar3'):
         set_fraction('s3', 's4', fraction_predicate.get_fraction('s2', 's3'))
-    elif fraction_predicate.has('s2', 's3') and fraction_predicate.has('s3', 's4') and equal.has('a1', 'a2'):
+    elif fraction_predicate.has('s2', 's3') and fraction_predicate.has('s3', 's4') and equal_predicate.has('a1', 'a2'):
         set_equal('ar4', 'ar3')
         set_congruent('ar4', 'ar3')
     elif fraction_predicate.has('s3', 's2') and fraction_predicate.has('s3', 's4') and equal_predicate.has('ar4', 'ar3'):
@@ -907,7 +907,7 @@ def know_s3():
 def know_s4():
         #s4 very similar to s2
 
-    if perpendicular_predicate.has('s4', 's3') and not perpendicular_predicate.has('s3', 's2') and not perpendicular_predicate.has('s7', 's6'):
+    if perpendicular_predicate.has('s4', 's3') and not (perpendicular_predicate.has('s3', 's2') or perpendicular_predicate.has('s7', 's6')):
         set_sum_value('a1', 'a3', '90')
 
     #SET_EQUAL
@@ -954,7 +954,7 @@ def know_s4():
 
     if fraction_predicate.has('s4', 's3') and equal_predicate.has('ar4', 'ar3'):
         set_fraction('s3', 's2', fraction_predicate.get_fraction('s4', 's3'))
-    elif fraction_predicate.has('s4', 's3') and fraction_predicate.has('s3', 's2') and equal.has('a1', 'a2'):
+    elif fraction_predicate.has('s4', 's3') and fraction_predicate.has('s3', 's2') and equal_predicate.has('a1', 'a2'):
         set_equal('ar4', 'ar3')
         set_congruent('ar4', 'ar3')
     elif fraction_predicate.has('s3', 's4') and fraction_predicate.has('s3', 's2') and equal_predicate.has('ar4', 'ar3'):
@@ -1325,9 +1325,9 @@ def know_arc1():
     elif equal_predicate.has('arc1', 'arc4') and equal_predicate.has('ar2', 'ar5'):
         set_equal('s1', 's5')
     #SET FRACTION
-    if fraction_predicate.has('arc1', 'arc4') and fraction_predicate.has('s1', 's5') and not (equal.has('s1', 's5') or equal.has('s1', 's5')):
+    if fraction_predicate.has('arc1', 'arc4') and fraction_predicate.has('s1', 's5') and not (equal_predicate.has('s1', 's5') or equal_predicate.has('s1', 's5')):
         set_similar('s1', 's5')
-    elif fraction_predicate.has('arc1', 'arc4') and similar_predicate.has('s1', 's5') and not (equal.has('s1', 's5') or equal.has('s1', 's5')):
+    elif fraction_predicate.has('arc1', 'arc4') and similar_predicate.has('s1', 's5') and not (equal_predicate.has('s1', 's5') or equal_predicate.has('s1', 's5')):
         set_fraction('s1', 's5', fraction_predicate.get_fraction('arc1', 'arc4'))
 
     #set sum value #does not tell anything about any other portion of the problem
@@ -1340,7 +1340,7 @@ def know_arc3():
     elif tan_predicate.has('arc3', 's3') and equal_predicate.has('a1', 'a2') and equal_predicate.has('ar4', 'ar3'):
         set_equal('s2', 's4')
     elif tan_predicate.has('arc3', 's3') and equal_predicate.has('ar4', 'ar3') and equal_predicate.has('s2', 's4'):
-        set_equal('a1', 'a2')
+         set_equal('a1', 'a2')
 
     #This one concerns 2
     if fraction_predicate.has('arc3', 'arc5') and equal_predicate.has('s6', 's4') and equal_predicate.has('a1', 'a2') and fraction_predicate.has('s3', 's7') and fraction_predicate.get_fraction('arc3', 'arc5') == '2' and fraction_predicate.get_fraction('s3', 's7') == '2':
@@ -1388,9 +1388,9 @@ def know_arc4():
     elif equal_predicate.has('arc4', 'arc1') and equal_predicate.has('ar2', 'ar5'):
         set_equal('s1', 's5')
     #SET FRACTION
-    if fraction_predicate.has('arc4', 'arc1') and fraction_predicate.has('s1', 's5') and not (equal.has('s1', 's5') or equal.has('s1', 's5')):
+    if fraction_predicate.has('arc4', 'arc1') and fraction_predicate.has('s1', 's5') and not (equal_predicate.has('s1', 's5') or equal_predicate.has('s1', 's5')):
         set_similar('s1', 's5')
-    elif fraction_predicate.has('arc4', 'arc1') and similar_predicate.has('s1', 's5') and not (equal.has('s1', 's5') or equal.has('s1', 's5')):
+    elif fraction_predicate.has('arc4', 'arc1') and similar_predicate.has('s1', 's5') and not (equal_predicate.has('s1', 's5') or equal_predicate.has('s1', 's5')):
         set_fraction('s1', 's5', fraction_predicate.get_fraction('arc4', 'arc1'))
 
 
