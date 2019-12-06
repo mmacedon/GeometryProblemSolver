@@ -220,22 +220,22 @@ def set_parallel(name1, name2): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":
+    if name1 == 's8':
         know_s8()
-    elif name1 is "s9":
+    elif name1 == 's9':
         know_s9()
-    elif name1 is "s10":
+    elif name1 == 's10':
         know_s10()
-    elif name1 is "s11":
+    elif name1 == 's11':
         know_s11()
 
-    if name2 is "s8":
+    if name2 == 's8':
         know_s8()
-    elif name2 is "s9":
+    elif name2 == 's9':
         know_s9()
-    elif name2 is "s10":
+    elif name2 == 's10':
         know_s10()
-    elif name2 is "s11":
+    elif name2 == 's11':
         know_s11()
 
 def set_perpendicular(name1, name2): #When a “perpendicular” predicate is given
@@ -246,22 +246,22 @@ def set_perpendicular(name1, name2): #When a “perpendicular” predicate is gi
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":
+    if name1 == 's8':
         know_s8()
-    elif name1 is "s9":
+    elif name1 == 's9':
         know_s9()
-    elif name1 is "s10":
+    elif name1 == 's10':
         know_s10()
-    elif name1 is "s11":
+    elif name1 == 's11':
         know_s11()
 
-    if name2 is "s8":
+    if name2 == 's8':
         know_s8()
-    elif name2 is "s9":
+    elif name2 == 's9':
         know_s9()
-    elif name2 is "s10":
+    elif name2 == 's10':
         know_s10()
-    elif name2 is "s11":
+    elif name2 == 's11':
         know_s11()
 
 def set_equal(name1, name2): #Similar to above
@@ -272,47 +272,47 @@ def set_equal(name1, name2): #Similar to above
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":
+    if name1 == 's8':
         know_s8()
-    elif name1 is "s9":
+    elif name1 == 's9':
         know_s9()
-    elif name1 is "s10":
+    elif name1 == 's10':
         know_s10()
-    elif name1 is "s11":
+    elif name1 == 's11':
         know_s11()
-    elif name1 is "ar7":
+    elif name1 == 'ar7':
         know_ar7()
-    elif name1 is "a4":
+    elif name1 == 'a4':
         know_a4()
-    elif name1 is "a5":
+    elif name1 == 'a5':
         know_a5()
-    elif name1 is "a6":
+    elif name1 == 'a6':
         know_a6()
-    elif name1 is "ar7":
+    elif name1 == 'a7':
         know_a7()
-    elif name1 is "a8":
+    elif name1 == 'a8':
         know_a8()
 
 
-    if name2 is "s8":
+    if name2 == 's8':
         know_s8()
-    elif name2 is "s9":
+    elif name2 == 's9':
         know_s9()
-    elif name2 is "s10":
+    elif name2 == 's10':
         know_s10()
-    elif name2 is "s11":
+    elif name2 == 's11':
         know_s11()
-    elif name2 is "ar7":
+    elif name2 == 'ar7':
         know_ar7()
-    elif name2 is "a4":
+    elif name2 == 'a4':
         know_a4()
-    elif name2 is "a5":
+    elif name2 == 'a5':
         know_a5()
-    elif name2 is "a6":
+    elif name2 == 'a6':
         know_a6()
-    elif name2 is "ar7":
+    elif name2 == 'a7':
         know_a7()
-    elif name2 is "a8":
+    elif name2 == 'a8':
         know_a8()
 
 
@@ -325,47 +325,47 @@ def set_fraction(name1, name2,fraction): #When a “parallel” predicate is giv
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":
+    if name1 == 's8':
         know_s8()
-    elif name1 is "s9":
+    elif name1 == 's9':
         know_s9()
-    elif name1 is "s10":
+    elif name1 == 's10':
         know_s10()
-    elif name1 is "s11":
+    elif name1 == 's11':
         know_s11()
-    elif name1 is "ar7":
+    elif name1 == 'ar7':
         know_ar7()
-    elif name1 is "a4":
+    elif name1 == 'a4':
         know_a4()
-    elif name1 is "a5":
+    elif name1 == 'a5':
         know_a5()
-    elif name1 is "a6":
+    elif name1 == 'a6':
         know_a6()
-    elif name1 is "ar7":
+    elif name1 == 'a7':
         know_a7()
-    elif name1 is "a8":
+    elif name1 == 'a8':
         know_a8()
 
 
-    if name2 is "s8":
+    if name2 == 's8':
         know_s8()
-    elif name2 is "s9":
+    elif name2 == 's9':
         know_s9()
-    elif name2 is "s10":
+    elif name2 == 's10':
         know_s10()
-    elif name2 is "s11":
+    elif name2 == 's11':
         know_s11()
-    elif name2 is "ar7":
+    elif name2 == 'ar7':
         know_ar7()
-    elif name2 is "a4":
+    elif name2 == 'a4':
         know_a4()
-    elif name2 is "a5":
+    elif name2 == 'a5':
         know_a5()
-    elif name2 is "a6":
+    elif name2 == 'a6':
         know_a6()
-    elif name2 is "ar7":
+    elif name2 == 'a7':
         know_a7()
-    elif name2 is "a8":
+    elif name2 == 'a8':
         know_a8()
 
 
@@ -377,47 +377,47 @@ def set_sum_value(name1, name2,sum): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":
+    if name1 == 's8':
         know_s8()
-    elif name1 is "s9":
+    elif name1 == 's9':
         know_s9()
-    elif name1 is "s10":
+    elif name1 == 's10':
         know_s10()
-    elif name1 is "s11":
+    elif name1 == 's11':
         know_s11()
-    elif name1 is "ar7":
+    elif name1 == 'ar7':
         know_ar7()
-    elif name1 is "a4":
+    elif name1 == 'a4':
         know_a4()
-    elif name1 is "a5":
+    elif name1 == 'a5':
         know_a5()
-    elif name1 is "a6":
+    elif name1 == 'a6':
         know_a6()
-    elif name1 is "ar7":
+    elif name1 == 'a7':
         know_a7()
-    elif name1 is "a8":
+    elif name1 == 'a8':
         know_a8()
 
 
-    if name2 is "s8":
+    if name2 == 's8':
         know_s8()
-    elif name2 is "s9":
+    elif name2 == 's9':
         know_s9()
-    elif name2 is "s10":
+    elif name2 == 's10':
         know_s10()
-    elif name2 is "s11":
+    elif name2 == 's11':
         know_s11()
-    elif name2 is "ar7":
+    elif name2 == 'ar7':
         know_ar7()
-    elif name2 is "a4":
+    elif name2 == 'a4':
         know_a4()
-    elif name2 is "a5":
+    elif name2 == 'a5':
         know_a5()
-    elif name2 is "a6":
+    elif name2 == 'a6':
         know_a6()
-    elif name2 is "ar7":
+    elif name2 == 'a7':
         know_a7()
-    elif name2 is "a8":
+    elif name2 == 'a8':
         know_a8()
 
 
@@ -430,22 +430,22 @@ def set_similar(name1, name2): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":
+    if name1 == 's8':
         know_s8()
-    elif name1 is "s9":
+    elif name1 == 's9':
         know_s9()
-    elif name1 is "s10":
+    elif name1 == 's10':
         know_s10()
-    elif name1 is "s11":
+    elif name1 == 's11':
         know_s11()
 
-    if name2 is "s8":
+    if name2 == 's8':
         know_s8()
-    elif name2 is "s9":
+    elif name2 == 's9':
         know_s9()
-    elif name2 is "s10":
+    elif name2 == 's10':
         know_s10()
-    elif name2 is "s11":
+    elif name2 == 's11':
         know_s11()
 
 def set_congruent(name1, name2): #When a “parallel” predicate is given
@@ -456,22 +456,22 @@ def set_congruent(name1, name2): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":
+    if name1 == 's8':
         know_s8()
-    elif name1 is "s9":
+    elif name1 == 's9':
         know_s9()
-    elif name1 is "s10":
+    elif name1 == 's10':
         know_s10()
-    elif name1 is "s11":
+    elif name1 == 's11':
         know_s11()
 
-    if name2 is "s8":
+    if name2 == 's8':
         know_s8()
-    elif name2 is "s9":
+    elif name2 == 's9':
         know_s9()
-    elif name2 is "s10":
+    elif name2 == 's10':
         know_s10()
-    elif name2 is "s11":
+    elif name2 == 's11':
         know_s11()
 
 def set_tan(name1, name2): #When a “parallel” predicate is given
@@ -482,22 +482,22 @@ def set_tan(name1, name2): #When a “parallel” predicate is given
 
     #calls corrosponding know functions
     #there has got to be a better way to do this, might make the call know thing a seperate function later
-    if name1 is "s8":
+    if name1 == 's8':
         know_s8()
-    elif name1 is "s9":
+    elif name1 == 's9':
         know_s9()
-    elif name1 is "s10":
+    elif name1 == 's10':
         know_s10()
-    elif name1 is "s11":
+    elif name1 == 's11':
         know_s11()
 
-    if name2 is "s8":
+    if name2 == 's8':
         know_s8()
-    elif name2 is "s9":
+    elif name2 == 's9':
         know_s9()
-    elif name2 is "s10":
+    elif name2 == 's10':
         know_s10()
-    elif name2 is "s11":
+    elif name2 == 's11':
         know_s11()
 
 
@@ -633,17 +633,76 @@ def know_a8():
 def know_ar7():
     print ("ar7 known, but useless in this problem" )
 
+def remove(predicate_list, A, B):
+    new_predicates = []
+
+    for predicate in predicate_list:
+        if (predicate[0] == A and predicate[1] == B) or (predicate[0] == B and predicate[1] == A):
+            continue
+        else:
+            new_predicates.append(predicate)
+
+    return new_predicates
 
 
-
-def get_all(predicates):
-
-    #added in later in development
-    print("NOTE: FOR THIS PROBLEM, THE ASSUMPTION IS HELD THAT S3 BEING TANGENT TO ARC3\n")
-    print("CREATES A BISECTOR OF ARC3")
+def remove_input_predicates(predicates):
     for predicate in predicates:
         if predicate[0] == 'set_parallel':
-            print("Parallel is not applicable to this problem.\n")
+            if parallel.has(predicate[1][0], predicate[1][1]):
+                parallel.relationships = remove(parallel.relationships, predicate[1][0], predicate[1][1])
+        elif predicate[0] == 'set_perpendicular':
+            if perpendicular.has(predicate[1][0], predicate[1][1]):
+                perpendicular.relationships = remove(perpendicular.relationships, predicate[1][0], predicate[1][1])
+        elif predicate[0] == 'set_equal':
+            if equal.has(predicate[1][0], predicate[1][1]):
+                equal.relationships = remove(equal.relationships, predicate[1][0], predicate[1][1])
+        elif predicate[0] == 'set_fraction':
+            if fraction.has(predicate[1][0], predicate[1][1],predicate[1][2]):
+                fraction.relationships = remove(fraction.relationships, predicate[1][0], predicate[1][1])
+        elif predicate[0] == 'set_sum_value':
+            if sum_value.has(predicate[1][0], predicate[1][1],predicate[1][3]):
+                sum_value.relationships = remove(sum_value.relationships, predicate[1][0], predicate[1][1])
+        elif predicate[0] == 'set_congruent':
+            if congruent.has(predicate[1][0], predicate[1][1]):
+                congruent.relationships = remove(congruent.relationships, predicate[1][0], predicate[1][1])
+        elif predicate[0] == 'set_tan':
+            if tan.has(predicate[1][0], predicate[1][1]):
+                tan.relationships = remove(tan.relationships, predicate[1][0], predicate[1][1])
+        else:
+            print("There was an error with the predicate %s\n" % predicate[0])
+
+
+def create_dictionary(predicates):
+    dict = {"null" : "NULL"}
+
+    if len(parallel.relationships) > 0 :
+        dict['parallel'] = parallel.relationships
+    if len(perpendicular.relationships) > 0 :
+        dict['perpendicular'] = perpendicular.relationships
+    if len(equal.relationships) > 0:
+        dict['equal'] = equal.relationships
+    if len(fraction.relationships) > 0:
+        dict['fraction'] = fraction.relationships
+    if len(sum_value.relationships) > 0:
+        dict['sum_value'] = sum_value.relationships
+    if len(similar.relationships) > 0:
+        dict['similar'] = similar.relationships
+    if len(congruent.relationships) > 0:
+        dict['congruent'] = congruent.relationships
+    if len(tan.relationships) > 0:
+        dict['tangent'] = tan.relationships
+
+    if len(dict) > 1:
+        dict.pop('null')
+
+    return dict
+
+def get_all(predicates):
+    #added in later in development
+    for predicate in predicates:
+        if predicate[0] == 'set_parallel':
+            print(predicate[0])
+            set_parallel(predicate[1][0], predicate[1][1])
         elif predicate[0] == 'set_perpendicular':
             print(predicate[0])
             set_perpendicular(predicate[1][0], predicate[1][1])
@@ -661,7 +720,7 @@ def get_all(predicates):
             print("Congruent is not a valid input for this problem")
         elif predicate[0] == 'set_tan':
             print(predicate[0])
-            set_tan(predicate[1][0], predicate[1][1])
+            print("Congruent is not a valid input for this problem")
         else:
             print("There was an error with the predicate %s\n" % predicate[0])
 
@@ -675,10 +734,14 @@ def get_all(predicates):
         #outputdict["parallel"] = [stuff]
 
 
-    outputdict.pop("NULL") #removes temporary null from dictionary
+    remove_input_predicates(predicates)
+    dict = create_dictionary(predicates)
+    return dict
 
-    print(outputdict)
-    return outputdict
+    #outputdict.pop("NULL") #removes temporary null from dictionary
+
+    #print(outputdict)
+    #return outputdict
 
     #leftovers
     #testdict = {
